@@ -5,9 +5,37 @@
 
 }
 body{
-    background-color: black;
+    background-color: #013440;
+}
+/* ---------reusable--------   */
+.row{
+    width: 1000px;
+    margin: 0 auto;
 }
 /* ---------header--------   */
 /* ---------navigace--------   */
-
+nav {
+    background-color: #000;
+    height: 10vh;
+    
+    
+}
+nav ul{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 40%;
+}
+nav ul li{
+    display:inline-block;
+    margin-left:6%;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family:"Tahoma", serif;
+    
+}
 
