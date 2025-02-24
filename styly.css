@@ -16,7 +16,7 @@ body{
 /* ---------navigace--------   */
 
 
-
+/* ---------ikony--------   */
 .ikony{
     display:inline-block;
     position: fixed;
@@ -52,7 +52,7 @@ body{
 
 
 
-
+/* ---------navigace - hlavní--------   */
 
 nav ul li.Konktakt a:link,
 nav ul li.Kontakt a:visited {
@@ -107,3 +107,11 @@ nav ul li a{
     
 }
 
+
+/* ---------navigace - logo--------   */
+nav .logotokyo img{
+    width: 17%;
+    position:fixed;
+    margin-left:76%;
+    margin-top:-4px;
+}
