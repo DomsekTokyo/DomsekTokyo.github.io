@@ -5,7 +5,7 @@
 
 }
 body{
-    background-color: #013440;
+    background-color: #000;
 }
 /* ---------reusable--------   */
 .row{
@@ -14,17 +14,18 @@ body{
 }
 /* ---------header--------   */
 /* ---------navigace--------   */
+
+
+
 .ikony{
     display:inline-block;
+    position: fixed;
     margin-left: 8%;
     margin-top: 5px
 }
 .ikony a img {
     
     width: 50px;
-    
-    
-    
 }
 .ikony{
     display: inline-block;
@@ -51,14 +52,42 @@ body{
 
 
 
+
+
+nav ul li.Konktakt a:link,
+nav ul li.Kontakt a:visited {
+    padding: 7px 10px;
+    border-radius: 20px;
+    
+    background-color: #403585; 
+    color: white; 
+    display: inline-block; 
+    text-align: center;
+}
+nav ul li.Konktakt a:hover,
+nav ul li.Kontakt a:active {
+    background-color: #403585; 
+    color: #fff; 
+    opacity: 0.7;
+}
+nav ul li a:hover,
+nav ul li a:active{
+    border-bottom: 3px solid #403585;
+}
+
+
+
+
 nav {
+    position: fixed;
     background-color: #000;
     height: 10vh; 
+    
 }
 nav ul{
-    position: absolute;
+    position: fixed;
     left: 50%;
-    transform: translate(-50%, -140%);
+    transform: translate(-50%, 30%);
     width: 40%;
     
 }
@@ -73,6 +102,7 @@ nav ul li a{
     color: white;
     font-size: 30px;
     font-family:"Tahoma", serif;
+    
     
     
 }
