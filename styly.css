@@ -14,21 +14,58 @@ body{
 }
 /* ---------header--------   */
 /* ---------navigace--------   */
+.ikony{
+    display:inline-block;
+    margin-left: 8%;
+    margin-top: 5px
+}
+.ikony a img {
+    
+    width: 50px;
+    
+    
+    
+}
+.ikony{
+    display: inline-block;
+    margin-top:10px;
+}
+.ikony .instagram img{
+    width: 70px;
+   /*border: 2px solid #fff;*/
+   
+  
+}
+.ikony .facebook img{
+    width: 50px;
+    /*border: 2px solid #fff;*/
+    margin-bottom: 2px;
+}
+.ikony .github img{
+    width: 55px;
+   /*border: 2px solid #fff;*/
+   margin-bottom: 2px;
+}
+
+
+
+
+
 nav {
     background-color: #000;
-    height: 10vh;
-    
-    
+    height: 10vh; 
 }
 nav ul{
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -140%);
     width: 40%;
+    
 }
 nav ul li{
     display:inline-block;
     margin-left:6%;
+    
     
 }
 nav ul li a{
@@ -36,6 +73,7 @@ nav ul li a{
     color: white;
     font-size: 30px;
     font-family:"Tahoma", serif;
+    
     
 }
 
