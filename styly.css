@@ -158,12 +158,18 @@ nav .logotokyo img{
 
 .hlavni-heading .hlava-text{
     border: 2px solid #fff;
-    padding: 10px 5px;
+    padding: 24px 26px;
     border-radius: 10px;
+    
 }
 .hlavni-heading p{
     font-size: 20px;
     margin-top:10px;
     color: #fff;
     text-align: center;
+
 }
+
+/* ---------Main-------   */
+
+/* ---------about-me--------   */
