@@ -193,7 +193,7 @@ nav .logotokyo img{
   float:left;
   text-align: center;
   margin-top: 80px;
-  margin-right: 80px;
+  margin-right: 48px;
 }
 .text-popis p{
     font-size: 25px;
@@ -207,30 +207,31 @@ nav .logotokyo img{
     
   
 }
+
 /* ---------plany--------   */
 .plany img{
     display: block;
     width: 40%;
 }
 .plany .text-popis{
-    margin-left: 80px;
+    margin-left: 48px;
     float:right;
     margin-top: -366px;
 }
 .plany{
     margin-top:50px;
 }
+
 /* ---------Úspěchy--------   */
 .uspechy img{
     display: block;
     width: 40%;
+    margin-right: 10px;
 }
 .uspechy{
     margin-top:50px;
 }
-.uspechy .text-popis{
-    margin-top: 40px;
-}
+
 
 /* ---------projekty--------   */
 .soon {
@@ -259,10 +260,10 @@ nav .logotokyo img{
 /* ---------footer--------   */
 /* ---------kontakt--------   */
 .kontakty-foot .ikony{
-    position: relative;
-    display: inline-block;
-    left: 39%;
-    max-width: 22%;
+    display: block;
+    position: static;
+    margin: 0 auto;
+    text-align: center;
 }
 .kontakty-foot p{
 color: #fff;
@@ -285,11 +286,13 @@ font-size: 20px;
     margin-bottom: 10px;
     
 }
+
 .footer-text p{
 font-size: 15px;
 margin-bottom: 30px;
 font-style: italic;
 }
+
 .email{
     
     margin-bottom: 10px;
