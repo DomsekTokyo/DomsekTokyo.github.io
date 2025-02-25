@@ -1,36 +1,53 @@
+@media only screen and (max-width:1130px){
+    nav .logotokyo img{
+        display: none;
+    }
+}
+
+
 @media only screen and (max-width: 1000px) {
     /* Společné styly pro všechny texty popisů */
     .vzdelani .text-popis,
     .plany .text-popis,
     .uspechy .text-popis {
         clear: both;
-        margin: 0 auto 100px auto; /* Zjednodušený margin */
-        width: 80%;
+        width: 100%; /* Text zabere celou šířku */
+        text-align: center;
+        margin: 0 auto 30px auto; /* Lepší mezera pod textem */
     }
 
     /* Obrázky v rámci všech těchto sekcí */
     .vzdelani img,
     .plany img,
     .uspechy img {
-        width: 75%;
+        width: 85%; /* Zvýšil jsem šířku, aby se lépe zobrazovaly na mobilech */
         display: block;
         margin: 0 auto;
     }
-
-    /* Specifické úpravy pro jednotlivé sekce */
-    .vzdelani .text-popis {
-        margin-left: 50px;
+    .vzdelani .span-1-of-2 {
+        width: 93.2%;
+        margin:0;
     }
-    
-    .plany .text-popis {
-        margin-right: 50px;
+    .plany .span-1-of-2 {
+        position: relative;
+        width: 93.2%;
+        margin-left:7px;
+        top:5%;
     }
-
-    .uspechy .text-popis {
-        margin-left: 50px;
+    .uspechy .span-1-of-2 {
+        width: 93.2%;
+        margin:0;
+       
+    }
+    /* Zajištění správného pořadí (text nahoře, obrázek pod tím) */
+    .vzdelani,
+    .plany,
+    .uspechy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
-
 
 @media only screen and (max-width:400px){
     .soon{

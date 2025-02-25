@@ -18,30 +18,21 @@
 
 		
 
-		// mobile navigation
-        /*
-		$(".jq--nav-icon").click(function(){
-			$(".nav-background").slideToggle();
-			$(".mobile-nav-back").fadeToggle();
-			$("nav ul").fadeToggle();
-		});
+                // Mobile navigation toggle
+        $(".jq--nav-icon").click(function () {
+            $(".nav-background").slideToggle();
+            $(".mobile-nav-back").fadeToggle();
+            $("nav ul").fadeToggle();
+        });
 
+        // Změna obrázku hamburger menu
+        $(".jq--image-hamburger").click(function () {
+            let img = $(this);
+            let currentSrc = img.attr("src");
 
-		podmínky
-		$(".jq--image-hamburger").click(function(){ 
-
-			if($(".jq--image-hamburger").attr("src") == "ima/piza.png")
-			{
-				$($(".jq--image-hamburger").attr("src","ima/cross.png"));
-			}
-			else
-			{
-				$($(".jq--image-hamburger").attr("src","ima/piza.png"));
-			}
-
-
-		});
-        */
+            img.attr("src", currentSrc === "ima/piza.png" ? "ima/cross.png" : "ima/piza.png");
+        });
+        
 			  
 	
 			

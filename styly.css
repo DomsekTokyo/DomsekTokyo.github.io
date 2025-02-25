@@ -147,7 +147,7 @@ nav ul li a{
 
 /* ---------navigace - logo--------   */
 nav .logotokyo img{
-    width: 17%;
+    max-width: 248px;
     position:fixed;
     margin-left:75%;
     margin-top:-4px;
