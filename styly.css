@@ -176,6 +176,7 @@ nav .logotokyo img{
 /* ---------Main-------   */
 
 /* ---------about-me--------   */
+/* ---------vzdelani--------   */
 .text-popis{
     width: 50%;
   color: #fff;  
@@ -195,4 +196,25 @@ nav .logotokyo img{
     width: 40%;
     
   
+}
+/* ---------plany--------   */
+.plany img{
+    display: block;
+    width: 40%;
+}
+.plany .text-popis{
+    margin-left: 80px;
+    float:right;
+    margin-top: -290px;
+}
+.plany{
+    margin-top:50px;
+}
+/* ---------Úspěchy--------   */
+.uspechy img{
+    display: block;
+    width: 40%;
+}
+.uspechy{
+    margin-top:50px;
 }
