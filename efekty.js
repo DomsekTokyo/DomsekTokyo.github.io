@@ -16,23 +16,36 @@
 			$("html, body").animate({scrollTop: $(".jq--kontakty").offset().top}, 1800);
 		});
 
-		
-
-                // Mobile navigation toggle
-        $(".jq--nav-icon").click(function () {
-            $(".nav-background").slideToggle();
-            $(".mobile-nav-back").fadeToggle();
-            $("nav ul").fadeToggle();
+		$(document).ready(function() {
+            $(".jq--nav-icon").click(function() {
+                $("nav ul").toggleClass("open"); // Toggle třídy 'open' pro zobrazení/skrytí menu
+            });
         });
 
-        // Změna obrázku hamburger menu
-        $(".jq--image-hamburger").click(function () {
-            let img = $(this);
-            let currentSrc = img.attr("src");
+		// mobile navigation
+        /*
+		$(".jq--nav-icon").click(function(){
+			$(".nav-background").slideToggle();
+			$(".mobile-nav-back").fadeToggle();
+			$("nav ul").fadeToggle();
+		});
 
-            img.attr("src", currentSrc === "ima/piza.png" ? "ima/cross.png" : "ima/piza.png");
-        });
-        
+
+		podmínky
+		$(".jq--image-hamburger").click(function(){ 
+
+			if($(".jq--image-hamburger").attr("src") == "ima/piza.png")
+			{
+				$($(".jq--image-hamburger").attr("src","ima/cross.png"));
+			}
+			else
+			{
+				$($(".jq--image-hamburger").attr("src","ima/piza.png"));
+			}
+
+
+		});
+        */
 			  
 	
 			
