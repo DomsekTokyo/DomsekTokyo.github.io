@@ -11,7 +11,9 @@ body{
 .row{
     width: 1000px;
     margin: 0 auto;
+    
 }
+
 
 
 .nadpis-special{
@@ -19,6 +21,7 @@ body{
     color: #fff;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 85px;
 }
 .nadpis-special::after {
     content: "";
@@ -79,7 +82,7 @@ nav ul li.Konktakt a:link,
 nav ul li.Kontakt a:visited {
     padding: 7px 10px;
     border-radius: 20px;
-    
+    border-bottom:transparent;
     background-color: #403585; 
     color: white; 
     display: inline-block; 
@@ -105,7 +108,7 @@ nav {
     width: 100%;
     background-color: #000;
     height: 12vh; 
-    
+    border-bottom:2px solid #403585;
 }
 nav ul {
     position: absolute; 
@@ -173,3 +176,23 @@ nav .logotokyo img{
 /* ---------Main-------   */
 
 /* ---------about-me--------   */
+.text-popis{
+    width: 50%;
+  color: #fff;  
+  float:left;
+  text-align: center;
+  margin-top: 80px;
+  margin-right: 80px;
+}
+.text-popis p{
+    font-size: 25px;
+}
+.text-popis h2{
+    font-size: 40px;
+}
+.vzdelani img{
+    display: block;
+    width: 40%;
+    
+  
+}
