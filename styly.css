@@ -20,25 +20,30 @@ body{
     text-align: center;
     margin: 0 auto;
 }
-.nadpis-special::after{
+.nadpis-special::after {
     content: "";
     display: block;
     width: 150px;
-    margin: 0 auto;
-    border-bottom: 4px solid #fff;
-    
+    height: 4px; 
+    background-color: #fff;
+    margin: 10px auto;
 }
+
 /* ---------header--------   */
 /* ---------navigace--------   */
 
 
 /* ---------ikony--------   */
-.ikony{
-    display:inline-block;
+.ikony {
     position: fixed;
-    margin-left: 8%;
-    margin-top: 5px
+    left: 9%;
+    top:5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
 .ikony a img {
     
     width: 50px;
@@ -102,13 +107,14 @@ nav {
     height: 12vh; 
     
 }
-nav ul{
-    position: fixed;
+nav ul {
+    position: absolute; 
     left: 50%;
-    transform: translate(-50%, 30%);
-    width: 40%;
-    
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
 }
+
 nav ul li{
     display:inline-block;
     margin-left:6%;
@@ -137,25 +143,20 @@ nav .logotokyo img{
 /* ---------header--------   */
 .hlavni-heading {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url("images/zkouska.jpg");
-    background-size: cover;
+                url("images/zkouska.jpg") no-repeat center center / cover;
     width: 100%; 
     height: 700px; 
     z-index: 50;
-    position:absolute;
-    top:10%;
+    position: relative; 
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.hlavni-heading h1{
-    margin-top: 200px;
-}
-.hlavni-heading {
-    margin-top:100px;
-    position:absolute;
-    top: -5%;
-    
-    
-}
+
+
+
 
 
 .hlavni-heading p{
