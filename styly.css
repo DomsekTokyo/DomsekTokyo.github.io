@@ -213,7 +213,7 @@ nav .logotokyo img{
 .vzdelani img{
     width: 80%;
     margin-bottom: 20px;
-    
+    margin-left: 55px;
   
 }
 
@@ -233,6 +233,7 @@ nav .logotokyo img{
 /* ---------Úspěchy--------   */
 .uspechy img{
     width: 80%;
+    margin-left: 55px;
 }
 .uspechy{
     margin-top:50px;
