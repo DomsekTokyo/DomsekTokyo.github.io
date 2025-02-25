@@ -1,6 +1,44 @@
-@media only screen and (max-width: 970px){
+@media only screen and (max-width: 1000px) {
+    /* Společné styly pro všechny texty popisů */
+    .vzdelani .text-popis,
+    .plany .text-popis,
+    .uspechy .text-popis {
+        clear: both;
+        margin: 0 auto 100px auto; /* Zjednodušený margin */
+        width: 80%;
+    }
 
-}
-@media only screen and (max-width: 700px){
+    /* Obrázky v rámci všech těchto sekcí */
+    .vzdelani img,
+    .plany img,
+    .uspechy img {
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Specifické úpravy pro jednotlivé sekce */
+    .vzdelani .text-popis {
+        margin-left: 50px;
+    }
     
+    .plany .text-popis {
+        margin-right: 50px;
+    }
+
+    .uspechy .text-popis {
+        margin-left: 50px;
+    }
+}
+
+
+@media only screen and (max-width:400px){
+    .soon{
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 300px;
+    }
+    .soon h1{
+        margin-top: 35%;
+    }
 }
