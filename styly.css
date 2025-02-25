@@ -9,7 +9,7 @@ body{
 }
 /* ---------reusable--------   */
 .row{
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
     
 }
@@ -94,10 +94,12 @@ nav ul li.Kontakt a:active {
     background-color: #403585; 
     color: #fff; 
     opacity: 0.7;
+    transition: 0.5s;
 }
 nav ul li a:hover,
 nav ul li a:active{
     border-bottom: 3px solid #403585;
+    transition: 0.5s;
 }
 
 
@@ -245,4 +247,35 @@ nav .logotokyo img{
     font-style: italic;
     margin-top: 10px;
 }
-/* ---------footer - kontakt--------   */
+/* ---------footer--------   */
+/* ---------kontakt--------   */
+.kontakty-foot .ikony{
+    position: relative;
+    display: inline-block;
+    left: 40%;
+    width: 20%;
+}
+.kontakty-foot p{
+color: #fff;
+margin: 50px auto;
+text-align: center;
+font-size: 20px;
+}
+.kontakty-foot .email:link,
+.kontakty-foot .email:visited{
+    border-bottom:2px solid transparent;
+}
+
+.kontakty-foot .email:hover,
+.kontakty-foot .email:active{
+    border-bottom:2px solid #fff;
+    transition: 0.3s;
+}
+.kontakty-foot .main-email{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.footer-text p{
+font-size: 15px;
+margin-bottom: 5px;
+}
