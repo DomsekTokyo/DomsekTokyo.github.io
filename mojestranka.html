@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang = "cs">
+<html lang="cs">
     <head>
         <title>Moje Stránky</title>
         <meta charset="UTF-8">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href = "styly.css">
-        <link rel="stylesheet" href = "styly.css">
-
+        <link rel="stylesheet" href="styly.css">
+        <link rel="icon" type="image/png" href="images/ikona.png">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="efekty.js"></script>
     </head>
+
     <body>
         <header>
             <nav >
@@ -19,25 +21,26 @@
                 </div>
                 
                 <ul>
-                    <li><a href = "#">Úvod</a></li>
-                    <li><a href = "#">O mně</a></li>
-                    <li><a href = "#">Projekty</a></li>
-                    <li class="Konktakt"><a href="#">Kontakt</a></li>
+                    <li><a href = "#" class ="jq--scroll--uvod">Úvod</a></li>
+                    <li><a href = "#" class ="jq--scroll--omne">O mně</a></li>
+                    <li><a href = "#" class ="jq--scroll--projekty">Projekty</a></li>
+                    <li class="Konktakt jq--scroll--kontakty"><a href="#">Kontakt</a></li>
                 </ul>
                 <div class="logotokyo">
-                    <img src = "images/logotokyo.png" alt = "logo tokyo s lebkou">
+                    <a href = "#"><img src = "images/logotokyo.png" alt = "logo tokyo s lebkou"></a>
                 </div> 
             </nav>
 
-
+            <div class = "jq--uvod"></div>
             <div class = "hlavni-heading">
-                <div class = "hlava-text">
-                    <h1 class = "nadpis-special">Úvod</h1> 
-                    <p>Zdarec! Díky, že jste zavítali na můj osobní web. <br>
+                
+                <div class = "hlava-text ">
+                    <h1 class = "nadpis-special ">Úvod</h1> 
+                    <p>Zdarec! Díky, že jste zavítali na můj osobně vytvořený web.<br>
                         Jmenuji se Dominik Mikulecký , moje přezdívka je Tokyo.<br>
                         Jsem IT specialista a programátor. <br>
                         Specializuji se na etický hacking a kyberbezpečnost.<br>
-                    Na této stránce najdete můj životopis, projekty a kontakt.</p>
+                    Na této stránce najdete informace o mně, projekty a kontakt.</p>
                 </div>
             </div>
             
@@ -47,19 +50,19 @@
         </header>
 
         <main>
-            <section class = "o mně">
-                <h1 class = "nadpis-special">O mně</h1>
+            <p class = "jq--omne schovat">.</p>
+            <div class = "empty "></div>
+            <section class = "o mně ">
+                <h1 class = "nadpis-special ">O mně</h1>
             
                 <div class = "vzdelani row">
                     <div class = "col span-1-of-2">
                     
                         <div class = "text-popis">
-                            <h2>Vzdělání</h2>
+                            <h2>Vzdělání a Sport</h2>
                             <p> 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Voluptatum quos quisquam consequatur rerum laudantium aspernatur
-                            umque sint rem velit vel fugiat nemo similique, pariatur quasi,
-                            excepturi eveniet suscipit? Aspernatur, quos?
+                                Vystudoval jsem základní školu T. G. Masaryka v Litomyšli. Nyní studuji střední školu aplikované kybernetiky v Hradci Králové, obor programátor, a plánuji pokračovat na vysokou školu.
+                                Rád chodím do posilovny a věnuji se boxu. Občas si také jdu ven jen tak zakopat.
                             </p>
                         
                         </div>
@@ -79,10 +82,9 @@
                         <div class = "text-popis">
                             <h2>Plány</h2>
                             <p> 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Voluptatum quos quisquam consequatur rerum laudantium aspernatur
-                            umque sint rem velit vel fugiat nemo similique, pariatur quasi,
-                            excepturi eveniet suscipit? Aspernatur, quos?
+                                V budoucnu se chci zaměřit na rozvoj svých dovedností v oblasti kyberbezpečnosti a etického hackingu. Plánuji se účastnit různých odborných kurzů a projektů, které mi pomohou posunout se na vyšší úroveň.
+                                Momentálně se učím Python, C#, HTML a CSS, abych měl širší základ pro vývoj aplikací a webů a mohl se dál zlepšovat v programování.
+                                
                             </p>
                         
                         </div>
@@ -96,10 +98,7 @@
                         <div class = "text-popis">
                             <h2>Úspěchy</h2>
                             <p> 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Voluptatum quos quisquam consequatur rerum laudantium aspernatur
-                            umque sint rem velit vel fugiat nemo similique, pariatur quasi,
-                            excepturi eveniet suscipit? Aspernatur, quos?
+                                Jsem velmi aktivní a mám za sebou několik zajímavých úspěchů. Vybojoval jsem 3. místo ve skautských státních závodech, což byla velká výzva. Dále jsem postoupil do okresního kola olympiády z fyziky a zeměpisu na základní škole, kde jsem získal velmi dobré výsledky. Moje výsledky ve škole jsou také na výborné úrovni, což mi pomáhá dosahovat mých osobních cílů.
                             </p>
                         
                         </div>
@@ -110,8 +109,9 @@
                 </div>
             </section>
 
-            <section class = "row projekty">
-                <h1 class = "nadpis-special">Projekty</h1>
+            <section class = "row projekty ">
+                <p class = "jq--projekty schovat">.</p>
+                <h1 class = "nadpis-special ">Projekty</h1>
 
 
                 <div class = "soon">
@@ -126,9 +126,9 @@
         </main>
         
         <footer>
-            <div class = "row kontakty-foot">
+            <div class = "row kontakty-foot ">
                 <div>
-                    <h1 class = "nadpis-special">Kontakt</h1>
+                    <h1 class = "nadpis-special jq--kontakty">Kontakt</h1>
                 </div>
                 <p> <span class = "main-email">Email</span> <br><span class = "email">mikuleckydominik@gmail.com</span></p>
                 <div class="ikony">
@@ -136,7 +136,7 @@
                     <a href = "https://www.instagram.com/tokyo99t/" target = "_blank" class = "instagram" ><img src = "images/logo2.png" alt = "logo"></a>
                     <a href = "https://github.com/DomsekTokyo" target = "_blank" class = "github"><img src = "images/github.png" alt = "logo"></a>
                 </div>
-                <div class = "footer-text">¨
+                <div class = "footer-text">
                     <p>&copy; 2025 Dominik Mikulecký. Všechna práva vyhrazena.<br>Vytvořeno v Litomyšli<br>Tokyo</p>
                 </div>
                 
