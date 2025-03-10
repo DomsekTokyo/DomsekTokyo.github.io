@@ -69,6 +69,10 @@
         margin:0;
        
     }
+    .vzdelani img{
+        margin-left:0;
+        margin: 0 auto;
+    }
     /* Zajištění správného pořadí (text nahoře, obrázek pod tím) */
     .vzdelani,
     .plany,

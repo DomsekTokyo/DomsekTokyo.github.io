@@ -1,3 +1,6 @@
+
+
+
 *{
     
     padding:0;
@@ -188,6 +191,7 @@ nav .logotokyo img{
     margin-top:10px;
     color: #fff;
     text-align: center;
+    
 
 }
 
@@ -214,27 +218,30 @@ nav .logotokyo img{
 .vzdelani img{
     width: 80%;
     margin-bottom: 20px;
-    margin-left: 55px;
+   
   
 }
 
 /* ---------plany--------   */
 .plany img{
     width: 80%;
+    margin-right: 0;
 }
 .plany .text-popis{
     text-align: center;
+    margin-left: 0;
     
     
 }
 .plany{
     margin-top:50px;
+    
 }
 
 /* ---------Úspěchy--------   */
 .uspechy img{
     width: 80%;
-    margin-left: 55px;
+    
 }
 .uspechy{
     margin-top:50px;
@@ -242,6 +249,12 @@ nav .logotokyo img{
 
 
 /* ---------projekty--------   */
+.projekty .logotokyo img {
+    width: 315px; /* Zmenšení loga */
+    height: auto; /* Zachování poměru stran */
+    display: block;
+    margin: 0 auto; /* Zarovnání na střed */
+}
 .soon {
     display: block;
     margin: 0 auto;
@@ -314,9 +327,4 @@ footer .logotokyo img {
 }
 
 
- .projekty .logotokyo img {
-    width: 400px; /* Zmenšení loga */
-    height: auto; /* Zachování poměru stran */
-    display: block;
-    margin: 0 auto; /* Zarovnání na střed */
-}
+ 
