@@ -106,11 +106,8 @@
     
 }
 @media only screen and (max-width:600px){
-    nav ul li a {
-        font-size: 25px !important;
-    }
-    nav ul {
-        margin-left:10%;
+    nav ul{
+        display: none;
     }
 }
 @media only screen and (max-width:450px)

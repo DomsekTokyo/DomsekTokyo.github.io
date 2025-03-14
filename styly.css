@@ -159,10 +159,13 @@ nav .logotokyo img{
 
 
 /* ---------navigace-mobile--------   */
-
-
-
-
+.mobile-nav-icon img{
+    width: 64px;
+    float:right;
+    margin-top:20px;
+    margin-right:5%;
+    display: none;
+}
 
 /*  <img src="images/zkouska2.jpg"> */
 /* ---------header--------   */
