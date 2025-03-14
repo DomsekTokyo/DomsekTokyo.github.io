@@ -23,13 +23,13 @@
         });
 
 		// mobile navigation
-        /*
+        
 		$(".jq--nav-icon").click(function(){
-			$(".nav-background").slideToggle();
-			$(".mobile-nav-back").fadeToggle();
-			$("nav ul").fadeToggle();
+			$(".mobile-nav-back").slideToggle();
+			$("nav ul").slideToggle();
+			
 		});
-
+			/*
 
 		podmínky
 		$(".jq--image-hamburger").click(function(){ 
