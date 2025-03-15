@@ -257,6 +257,23 @@ nav .logotokyo img{
 
 
 /* ---------projekty--------   */
+.projekty .krabice-techno {
+    height: 200px;
+    border-radius: 10px;
+    background-color: #343840;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px 10px;
+}
+.projekty .krabice-techno h2{
+    color: #fff;
+    text-align: center;
+}
+
+/* ---------projekty - technologie--------   */
+
+/* ---------projekty - to co jsem uděla --------   */
 .projekty .logotokyo img {
     width: 315px; /* Zmenšení loga */
     height: auto; /* Zachování poměru stran */
