@@ -207,55 +207,72 @@ nav .logotokyo img{
 
 /* ---------about-me--------   */
 /* ---------vzdelani--------   */
- .text-popis{
-    
-  color: #fff;  
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
   
-  text-align: center;
-  
-}
-.vzdelani .text-popis{
-    margin-top:55px;
-}
-.text-popis p{
-    font-size: 25px;
-}
-.text-popis h2{
-    font-size: 40px;
-}
-.vzdelani img{
-    width: 80%;
-    margin-bottom: 20px;
-   
-  
-}
+  main ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+.stred{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
 
-/* ---------plany--------   */
-.plany img{
-    width: 80%;
-    margin-right: 0;
 }
-.plany .text-popis{
-    text-align: center;
-    margin-left: 0;
-    
+.sekceobrazku{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+main ul{
+    list-style: none;
+
     
 }
-.plany{
-    margin-top:50px;
+.sekcejedna{
+    display: flex;
+    justify-content: center;
+}
+.sekcedva{
+    display: flex;
+    justify-content: center;
+}
+
+.sekcetri{
+    display: flex;
+    justify-content: center;
+}
+
+.sekcejedna .text {
+    margin-left: 50px;
+}
+
+.sekcedva .text {
+    margin-right: 50px;
+}
+.sekcetri .text {
+    margin-left: 50px;
+}
+.obrazek{
+    width: 300px;
     
 }
-
-/* ---------Úspěchy--------   */
-.uspechy img{
-    width: 80%;
+.text {
+    max-width: 400px;
+    color: white;
     
+  }
+.text p{
+    font-size: 20px;
 }
-.uspechy{
-    margin-top:50px;
+.text h1{
+    font-size: 55px;
 }
-
-
 /* ---------projekty--------   */
 
 /* ---------projekty - technologie--------   */

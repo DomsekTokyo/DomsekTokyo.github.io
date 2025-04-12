@@ -26,62 +26,47 @@
 }
 
 
+@media only screen and (max-width: 650px) {
+    .sekcejedna {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  
+    .sekcejedna .text {
+      text-align: center !important;   
+      display: block !important;
+      margin: 0 auto !important;            
+    }
+  
+    .sekcedva {
+      display: flex !important;
+      flex-direction: column-reverse !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  
+    .sekcedva .text {
+      text-align: center !important;   
+      display: block !important;
+      margin: 0 auto !important;            
+    }
+  
+    .sekcetri {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  
+    .sekcetri .text {
+      text-align: center !important;   
+      display: block !important;
+      margin: 0 auto !important;            
+    }
+  }
 
-
-
-@media only screen and (max-width: 1050px) {
-    /* Společné styly pro všechny texty popisů */
-    .vzdelani .text-popis,
-    .plany .text-popis,
-    .uspechy .text-popis {
-        clear: both;
-        width: 100%; /* Text zabere celou šířku */
-        text-align: center;
-        margin: 0 auto 30px auto; /* Lepší mezera pod textem */
-    }
-
-    /* Obrázky v rámci všech těchto sekcí */
-    .vzdelani img,
-    .plany img,
-    .uspechy img {
-        width: 85%; /* Zvýšil jsem šířku, aby se lépe zobrazovaly na mobilech */
-        display: block;
-        margin: 0 auto;
-    }
-    .vzdelani .span-1-of-2 {
-        width: 93.2%;
-        margin:0;
-    }
-    .plany .span-1-of-2 {
-        position: relative;
-        width: 93.2%;
-        margin-left:7px;
-        top:5%;
-    }
-    .plany p{
-        margin-left:6%;
-    }
-    .plany img{
-        margin-left:16%;
-    }
-    .uspechy .span-1-of-2 {
-        width: 93.2%;
-        margin:0;
-       
-    }
-    .vzdelani img{
-        margin-left:0;
-        margin: 0 auto;
-    }
-    /* Zajištění správného pořadí (text nahoře, obrázek pod tím) */
-    .vzdelani,
-    .plany,
-    .uspechy {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 @media only screen and (max-width:600px)
 {
