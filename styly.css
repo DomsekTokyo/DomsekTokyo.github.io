@@ -283,7 +283,7 @@ main ul{
     display: block;
     margin: 0 auto;
     width: 70%;
-    padding: 10px 10px;
+    padding: 0px 0px;
 }
 .projekty .krabice-techno h2{
     color: #fff;
@@ -291,8 +291,11 @@ main ul{
     padding:10px;
 }
 .projekty .krabice-techno img{
-    display: inline-block;
-    margin: 0, auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+   
+    flex-direction: column;
+    align-items: center;
 }
 .projekty .krabice-techno img:hover,
 .projekty .krabice-techno img:active{
@@ -302,7 +305,7 @@ main ul{
 
 /* ---------projekty - to co jsem uděla --------   */
 .projekty .logotokyo img {
-    width: 315px; /* Zmenšení loga */
+    max-width: 315px; /* Zmenšení loga */
     height: auto; /* Zachování poměru stran */
     display: block;
     margin: 0 auto; /* Zarovnání na střed */

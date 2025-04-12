@@ -151,13 +151,18 @@
     
 
 }
-@media only screen and (max-width:386px){
-    .projekty .krabice-techno {
-        width: 55% !important;
+@media only screen and (max-width:477px){
+    .projekty .krabice-techno img{
+        margin-left: 20px;
     }
 }
-@media only screen and (max-width:337px){
-    .projekty .krabice-techno {
-        width: 60% !important;
+@media only screen and (max-width:440px){
+    .projekty .krabice-techno img{
+        margin-left: 40px;
+    }
+}
+@media only screen and (max-width:356px){
+    .projekty .krabice-techno img{
+        margin-left: 20px;
     }
 }
