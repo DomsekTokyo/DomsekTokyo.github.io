@@ -144,13 +144,67 @@
         margin-right: 2px;
         width: 300px;
     }
+
     .soon h1{
         margin-top: 35%;
+    }
+
+    .hlavni-heading {
+        display: flex;
+        background: none !important;
+        background-attachment: scroll;
+        
+      }
+    .hlavni-heading .hlava-text{
+        border: none !important;
+        
+    }
+    .hlavni-heading p{
+        text-align: left !important;
+        
+        margin-top: 2px !important;
+    }
+    h1{
+        font-size: 45px !important;
+    }
+    .nadpis-special{
+        margin-bottom:10px !important;
+        
+    }
+    .hlavni-heading .hlava-text{
+        margin-bottom: 0px !important;
+    }
+    
+    .responobrz{
+        display: inline !important;
+        width: 150px;
+        float: right;
+        position: relative;
+        bottom: 30px;
+       
+        
+    }
+    .hlavni-obrazek-res{
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url("images/pozadí.jpg") no-repeat center center / cover;
+    width: 100%; 
+    height: 700px; 
+    z-index: 50;
+    position: relative; 
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     }
     
     
 
 }
+
+
+
+
 @media only screen and (max-width:477px){
     .projekty .krabice-techno img{
         margin-left: 20px;

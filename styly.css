@@ -169,6 +169,9 @@ nav .logotokyo img{
 
 /*  <img src="images/zkouska2.jpg"> */
 /* ---------header--------   */
+.responobrz{
+    display: none;
+}
 .hlavni-heading {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                 url("images/zkouska1.jpg") no-repeat center center / cover;
