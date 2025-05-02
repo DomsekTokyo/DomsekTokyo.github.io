@@ -24,6 +24,8 @@ body{
 
 
 .nadpis-special{
+    letter-spacing: 4px;
+    font-family: "Francois One";
     font-size: 60px;
     color: #fff;
     text-align: center;
@@ -48,39 +50,45 @@ body{
 .ikony {
     position: fixed;
     left: 5%;
-    top: 5%;
+    top: 6%;
     transform: translateY(-50%);
     
     flex-direction: column;
     gap: 10px;
 }
 
-.ikony a img {
+.ikony a  {
     width: 50px;
     transition: transform 0.3s ease; 
 }
 
-.ikony .instagram img {
+.ikony .instagram  {
     width: 90px;
     margin-bottom:-16px;
+    text-decoration: none;
+    margin-left:25px;
 }
 
-.ikony .facebook img {
-    width: 60px;
+.ikony .facebook {
+    
     margin-bottom: -6px;
-    border: 2px solid #fff;
+    text-decoration: none;
     border-radius: 10px;
     padding:0px 5px;
+    margin-left:25px;
 }
 
-.ikony .github img {
+.ikony .github  {
     width: 58px;
     margin-bottom: -7px;
+    text-decoration: none;
+    margin-left:25px;
 }
 
 /* Přidání efektu pro hover */
-.ikony a:hover img {
+.ikony i:hover  {
     transform: scale(1.1); /* zvětšení ikony při najetí myší */
+    transition: all 1s ease;
 }
 
 
@@ -154,7 +162,7 @@ nav .logotokyo img{
     max-width: 210px;
     position:fixed;
     margin-left:75%;
-    margin-top:-4px;
+    margin-top: 10px;
 }
 
 
@@ -343,6 +351,7 @@ main ul{
     position: static;
     margin: 0 auto;
     text-align: center;
+    margin-right:25px;
 }
 .kontakty-foot p{
 color: #fff;
