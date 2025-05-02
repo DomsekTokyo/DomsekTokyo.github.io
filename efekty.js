@@ -16,39 +16,43 @@
 			$("html, body").animate({scrollTop: $(".jq--kontakty").offset().top}, 1800);
 		});
 
+		// toggle menu class (optional)
 		$(document).ready(function() {
-            $(".jq--nav-icon").click(function() {
-                $("nav ul").toggleClass("open"); // Toggle třídy 'open' pro zobrazení/skrytí menu
-            });
-        });
+			$(".jq--nav-icon").click(function() {
+				$("nav ul").toggleClass("open");
+			});
+		});
 
-		// mobile navigation
-        
+		// mobile navigation with logo handling
+		let menuOpen = false;
+
 		$(".jq--nav-icon").click(function(){
-			$(".mobile-nav-back").slideToggle();
-			$("nav ul").slideToggle();
-			
+			if (!menuOpen) {
+				// Otevírání menu
+				$(".logotokyo").fadeOut(200);
+				$(".mobile-nav-back").slideDown();
+				$("nav ul").slideDown(function() {
+					menuOpen = true;
+				});
+			} else {
+				// Zavírání menu
+				$(".mobile-nav-back").slideUp();
+				$("nav ul").slideUp(function() {
+					$(".logotokyo").fadeIn(200);
+					menuOpen = false;
+				});
+			}
 		});
-			/*
 
-		podmínky
+		/*
 		$(".jq--image-hamburger").click(function(){ 
-
-			if($(".jq--image-hamburger").attr("src") == "ima/piza.png")
-			{
-				$($(".jq--image-hamburger").attr("src","ima/cross.png"));
+			if($(".jq--image-hamburger").attr("src") == "ima/piza.png") {
+				$(".jq--image-hamburger").attr("src","ima/cross.png");
+			} else {
+				$(".jq--image-hamburger").attr("src","ima/piza.png");
 			}
-			else
-			{
-				$($(".jq--image-hamburger").attr("src","ima/piza.png"));
-			}
-
-
 		});
-        */
-			  
-	
-			
-		
+		*/
+
 	});
 })(jQuery);

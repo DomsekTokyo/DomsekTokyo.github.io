@@ -151,7 +151,7 @@ nav ul li a{
 
 /* ---------navigace - logo--------   */
 nav .logotokyo img{
-    max-width: 248px;
+    max-width: 210px;
     position:fixed;
     margin-left:75%;
     margin-top:-4px;
@@ -160,10 +160,10 @@ nav .logotokyo img{
 
 /* ---------navigace-mobile--------   */
 .mobile-nav-icon img{
-    width: 64px;
+    width: 50px;
     float:right;
-    margin-bottom: 100px;
-    margin-right:5%;
+    top: 20px;
+    
     display: none;
 }
 

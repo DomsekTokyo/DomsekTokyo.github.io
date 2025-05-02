@@ -197,6 +197,20 @@
     align-items: center;
     justify-content: center;
     }
+
+    header .nadpis-special::after {
+        background-color: transparent;
+    }
+    nav .logotokyo {
+        display:inline;
+        position: fixed;
+        
+         
+    }
+    nav .logotokyo img {
+        margin-left: 3% !important;
+        max-width: 155px !important;
+    }
     
     
 
