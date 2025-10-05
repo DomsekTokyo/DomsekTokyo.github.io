@@ -2,30 +2,10 @@
     nav .ikony{
         display: none;
     }
-    nav {
-        position: relative;
-    }
-    nav .logotokyo {
-       display:none;
-        
-    }
-
-    nav .logotokyo img {
-        max-width: 248px;
-        display: block;
-    }
-    nav .logotokyo img {
-    max-width: 248px;
-    display: block;
-    margin: 0 auto;
-    padding: 0; /* Pokud máš nějaký padding, odeber ho */
-}
-    
-
 
 }
-
-
+/* ffffffff*/
+/* sekce obrázku */
 @media only screen and (max-width: 650px) {
     .sekcejedna {
       display: flex !important;
@@ -67,18 +47,12 @@
     }
   }
 
-
-@media only screen and (max-width:600px)
-{
-    
-    nav ul li a {
-        font-size: 20px !important;
+@media only screen and (max-width: 650px) {
+    .navgation ul{
+        display: none ;
     }
-    nav ul {
-        margin-left:15%;
-    }
-
 }
+
 @media only screen and (max-width:578px)
 {
     
@@ -90,53 +64,7 @@
     }
     
 }
-@media only screen and (max-width: 600px) {
-    .mobile-nav-icon img {
-        position: fixed;
-        border-radius: 30px;
-        left: 80%;
-        top: 2%;
-        display: block !important;
-       
-    }
 
-
-    .mobile-nav-back{
-        height: 240px;
-        background-color: rgb(0,0,0);
-        border-bottom:2px solid #403585;
-        display: none;
-    }
-    
-
-    nav {
-        height: auto; 
-        padding: 10px 0;
-        
-        
-    }
-
-    nav ul {
-        margin-top:80px;
-        position: static; 
-        width: 100%; 
-        margin-left:32%;
-        text-align: left; 
-        padding: 0;
-        display: none;
-    }
-
-    nav ul li {
-        display: block; 
-        margin: 10px 0; 
-        width: 100%; 
-        
-    }
-    
-
-    
-   
-}
 
 @media only screen and (max-width:450px){
     .soon{
@@ -201,17 +129,7 @@
     header .nadpis-special::after {
         background-color: transparent;
     }
-    nav .logotokyo {
-        display:inline;
-        position: fixed;
-        
-         
-    }
-    nav .logotokyo img {
-        margin-left: 3% !important;
-        max-width: 155px !important;
-        margin-top:3px !important;
-    }
+
     
     
 
@@ -219,17 +137,14 @@
 
 
 
-@media only screen and (min-width: 400px) and (max-width: 585px) {
-    nav .logotokyo {
-        display: none !important;
-    }
-}
+
 
 @media only screen and (max-width:477px){
     .projekty .krabice-techno img{
         margin-left: 20px;
     }
 }
+
 @media only screen and (max-width:440px){
     .projekty .krabice-techno img{
         margin-left: 40px;
@@ -238,5 +153,14 @@
 @media only screen and (max-width:356px){
     .projekty .krabice-techno img{
         margin-left: 20px;
+    }
+}
+
+
+@media only screen and (max-width:830px){
+    .navbar ul li{
+        width: 150px;
+        padding: 10px 10px;
+        font-size: 18px ;
     }
 }
