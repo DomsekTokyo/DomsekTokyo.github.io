@@ -1,58 +1,115 @@
-(function($){
-	$(function(){
-		$(".jq--scroll--uvod").click(function(){
-			$("html, body").animate({scrollTop: $(".jq--uvod").offset().top}, 1000);
-		});
+const scrollMap = [
+    { btn: ".one", target: ".jq--uvod" },
+    { btn: ".two", target: ".jq--omne" },
+    { btn: ".three", target: ".projekty" },
+    { btn: ".four", target: ".kontakty-foot" },
+];
+let logo = document.querySelector(".logo")
+const navbar = document.querySelector(".navbar");
+const navmobile = document.querySelector(".mobil");
+const ham = document.querySelector(".hamburger");
+const cross = document.querySelector(".cross");
+let vyska = navbar.offsetHeight;
 
-		$(".jq--scroll--omne").click(function(){
-			$("html, body").animate({scrollTop: $(".jq--omne").offset().top}, 1500);
-		});
+scrollMap.forEach(item => {
+    const btn = document.querySelector(item.btn);
 
-		$(".jq--scroll--projekty").click(function(){
-			$("html, body").animate({scrollTop: $(".jq--projekty").offset().top}, 1700);
-		});
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
 
-		$(".jq--scroll--kontakty").click(function(){
-			$("html, body").animate({scrollTop: $(".jq--kontakty").offset().top}, 1800);
-		});
 
-		// toggle menu class (optional)
-		$(document).ready(function() {
-			$(".jq--nav-icon").click(function() {
-				$("nav ul").toggleClass("open");
-			});
-		});
+        const target = document.querySelector(item.target);
+        const kam = target.getBoundingClientRect().top + window.scrollY;
 
-		// mobile navigation with logo handling
-		let menuOpen = false;
 
-		$(".jq--nav-icon").click(function(){
-			if (!menuOpen) {
-				// Otevírání menu
-				$(".logotokyo").fadeOut(200);
-				$(".mobile-nav-back").slideDown();
-				$("nav ul").slideDown(function() {
-					menuOpen = true;
-				});
-			} else {
-				// Zavírání menu
-				$(".mobile-nav-back").slideUp();
-				$("nav ul").slideUp(function() {
-					$(".logotokyo").fadeIn(200);
-					menuOpen = false;
-				});
-			}
-		});
+        window.scrollTo({
+            top: kam - vyska,
+            behavior: "smooth"
+        });
 
-		/*
-		$(".jq--image-hamburger").click(function(){ 
-			if($(".jq--image-hamburger").attr("src") == "ima/piza.png") {
-				$(".jq--image-hamburger").attr("src","ima/cross.png");
-			} else {
-				$(".jq--image-hamburger").attr("src","ima/piza.png");
-			}
-		});
-		*/
 
-	});
-})(jQuery);
+    });
+});
+
+
+
+const scrollMap2 = [
+    { btn: ".one1", target: ".jq--uvod" },
+    { btn: ".two1", target: ".jq--omne" },
+    { btn: ".three1", target: ".projekty" },
+    { btn: ".four1", target: ".kontakty-foot" },
+];
+
+
+scrollMap2.forEach(item => {
+    const btn = document.querySelector(item.btn);
+
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Přepočítat pozici cíle
+        const target = document.querySelector(item.target);
+        const kam = target.getBoundingClientRect().top + window.scrollY;
+
+        // Dynamicky zjistit viditelné menu
+
+
+        // Scroll
+        window.scrollTo({
+            top: kam - 150,
+            behavior: "smooth"
+        });
+
+
+    });
+});
+
+
+function checkwindow(){
+    if (window.innerWidth > 660) {
+
+        navmobile.style.opacity = "0";
+        logo.style.opacity = "0";
+        navmobile.classList.remove("mobileopen");
+        navbar.style.display = "flex";
+        logo.classList.add("logo-styly");
+        ham.style.display = "none";
+        cross.style.display = "none";
+
+    } else {
+
+        ham.style.display = "flex";
+        ham.addEventListener("click", () => {
+
+            setTimeout(() => { logo.style.display = "flex"; }, 500);
+            logo.classList.add("logo-styly");
+            ham.style.display = "none";
+
+            cross.style.display = "flex";
+            logo.style.opacity = "1";
+            navmobile.style.opacity = "1";
+            navbar.style.display = "none";
+            navmobile.classList.add("mobileopen");
+
+        });
+
+        cross.addEventListener("click", () => {
+            navmobile.classList.remove("mobileopen");
+
+            ham.style.display = "flex";
+            logo.style.opacity = "0";
+            logo.classList.remove("logo-styly");
+            cross.style.display = "none";
+
+            setTimeout(() => { navbar.style.display = "flex"; }, 400);
+        });
+
+    }
+}
+
+// Spustí při načtení stránky
+checkwindow();
+
+// Spustí při změně velikosti okna
+window.addEventListener("resize", checkwindow);
+
