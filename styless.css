@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  padding-top: 100px;
 }
 
 .cross,
@@ -78,12 +77,6 @@ body {
   }
 }
 .mobil {
-  z-index: 1000;
-  height: 300px;
-  border-bottom: 5px solid rgba(32, 2, 50, 0.82);
-  overflow: hidden;
-  max-height: 0;
-  background-color: rgba(0, 0, 0, 0.89);
   width: 100%;
   top: 0;
   position: fixed;
@@ -103,8 +96,13 @@ body {
   text-decoration: none;
 }
 .mobil {
-  max-height: 0;
+  background-color: rgba(0, 0, 0, 0.89);
+  overflow: hidden;
   opacity: 0;
+  z-index: 1000;
+  border-bottom: 5px solid rgba(32, 2, 50, 0.82);
+  max-height: 0;
+  pointer-events: none;
   transition: max-height 0.6s ease-in-out, opacity 1s ease, transform 1s ease;
 }
 .mobil ul {
@@ -125,7 +123,31 @@ body {
   max-height: 500px;
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
   transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
+}
+
+.logo {
+  max-width: 0;
+  transition: opacity 1s ease;
+}
+
+.logo-styly {
+  position: fixed;
+  z-index: 1000;
+  max-width: 200px;
+  max-height: 10%;
+  right: 0;
+  top: 216px;
+  opacity: 1;
+  transition: opacity 1s ease;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    max-width: 0;
+  }
 }
 
 /*# sourceMappingURL=styless.css.map */

@@ -4,7 +4,7 @@ const scrollMap = [
     { btn: ".three", target: ".projekty" },
     { btn: ".four", target: ".kontakty-foot" },
 ];
-
+let logo = document.querySelector(".logo")
 const navbar = document.querySelector(".navbar");
 const navmobile = document.querySelector(".mobil");
 const ham = document.querySelector(".hamburger");
@@ -64,25 +64,15 @@ scrollMap2.forEach(item => {
     });
 });
 
-ham.addEventListener("click", () => {
-    ham.style.display = "none";
-    cross.style.display = "flex";
-    navbar.style.opacity= "1";
-    navmobile.classList.add("mobileopen");
-});
-
-cross.addEventListener("click", () => {
-    ham.style.display = "flex";
-    cross.style.display = "none";
-    navmobile.classList.remove("mobileopen");
-
-});
 
 function checkwindow(){
     if (window.innerWidth > 660) {
+
         navmobile.style.opacity = "0";
+        logo.style.opacity = "0";
         navmobile.classList.remove("mobileopen");
         navbar.style.display = "flex";
+        logo.classList.add("logo-styly");
         ham.style.display = "none";
         cross.style.display = "none";
 
@@ -91,8 +81,12 @@ function checkwindow(){
         ham.style.display = "flex";
         ham.addEventListener("click", () => {
 
+            setTimeout(() => { logo.style.display = "flex"; }, 500);
+            logo.classList.add("logo-styly");
             ham.style.display = "none";
+
             cross.style.display = "flex";
+            logo.style.opacity = "1";
             navmobile.style.opacity = "1";
             navbar.style.display = "none";
             navmobile.classList.add("mobileopen");
@@ -101,7 +95,10 @@ function checkwindow(){
 
         cross.addEventListener("click", () => {
             navmobile.classList.remove("mobileopen");
+
             ham.style.display = "flex";
+            logo.style.opacity = "0";
+            logo.classList.remove("logo-styly");
             cross.style.display = "none";
 
             setTimeout(() => { navbar.style.display = "flex"; }, 400);
@@ -116,9 +113,3 @@ checkwindow();
 // Spustí při změně velikosti okna
 window.addEventListener("resize", checkwindow);
 
-/*const scrollMap2 = [
-    { btn: ".jq--scroll--uvod", target: ".jq--uvod" },
-    { btn: ".jq--scroll--omne", target: ".jq--omne" },
-    { btn: ".jq--scroll--projekty", target: ".projekty" },
-    { btn: ".jq--scroll--kontakty", target: ".kontakty-foot" },
-];*/

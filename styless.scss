@@ -1,4 +1,4 @@
-$nav : rgba(0, 0, 0, 0.89);
+$nav: rgba(0, 0, 0, 0.89);
 
 
 @mixin styl{
@@ -74,11 +74,10 @@ $nav : rgba(0, 0, 0, 0.89);
 }
 
 @mixin mobil-nav{
-  overflow: hidden;
-  max-height: 0;
 
 
-  background-color: $nav;
+
+
   width: 100%;
   top:0;
   position: fixed;
@@ -107,7 +106,7 @@ $nav : rgba(0, 0, 0, 0.89);
 body{
   margin: 0;
   padding: 0;
-  padding-top:100px;
+
 }
 
 .cross,
@@ -130,20 +129,32 @@ body{
     display: flex;
   }
 }
-.mobil{
 
-  z-index: 1000;
-  height: 300px;
-  border-bottom: 5px solid rgba(32, 2, 50, 0.82);
+
+
+
+
+
+.mobil {
   @include mobil-nav;
-  max-height: 0;
+
+
+  background-color: $nav;
+  overflow: hidden ;
+
   opacity: 0;
-  transition:  max-height 0.6s ease-in-out, opacity 1s ease ,transform 1s ease;
-  ul{
-    margin-left:30px;
-    margin-top:30px;
+  z-index: 1000;
+  border-bottom: 5px solid rgba(32, 2, 50, 0.82);
+  max-height: 0;
+  pointer-events: none;
+  transition: max-height 0.6s ease-in-out, opacity 1s ease, transform 1s ease;
+
+  ul {
+    margin-left: 30px;
+    margin-top: 30px;
   }
-  ul li{
+
+  ul li {
     border: 7px solid rgba(32, 2, 50, 0.82);
     width: 200px;
     font-size: 23px;
@@ -153,13 +164,45 @@ body{
     align-items: center;
   }
 }
+
+
+
+
+
+
+
 .mobil.mobileopen {
 
-  max-height: 500px;
+ max-height: 500px;
   transform: translateY(0);
   opacity: 1;
-  transition:  max-height 1s ease-in-out, opacity 1s ease ,transform 1s ease;
+
+  pointer-events: auto;
+  transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
 }
+.logo {
+  max-width: 0;
+  transition: opacity 1s ease;
+}
+
+.logo-styly {
+  position: fixed;
+  z-index: 1000;
+  max-width: 200px;
+  max-height:10%;
+  right: 0;
+  top: 216px;
+  opacity: 1;
+  transition: opacity 1s ease;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 400px){
+  .logo{
+    max-width: 0;
+  }
+}
+
 
 
 
