@@ -64,7 +64,7 @@ scrollMap2.forEach(item => {
     });
 });
 
-
+//halo
 function checkwindow(){
     if (window.innerWidth > 660) {
 

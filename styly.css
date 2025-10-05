@@ -54,7 +54,7 @@ body {
     min-height: 700px;
     z-index: 50;
 
-    /* separátní definice pozadí */
+
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/zkouska1.jpg");
     background-size: cover;
     background-position: center center;

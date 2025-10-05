@@ -89,7 +89,7 @@
 @media only screen and (max-width: 450px) {
     .hlavni-heading {
         /* nová mobilní pozadí */
-        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/pozadí.jpg");
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/pozadí.jpg") !important;
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
