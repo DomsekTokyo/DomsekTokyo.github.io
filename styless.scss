@@ -1,10 +1,12 @@
 $nav: rgba(0, 0, 0, 0.89);
+$barvapozadi: rgba(32, 2, 50, 0.82);
 .typer{
   font-size: 40px;
   color:white;
 }
 
 @mixin styl{
+
   z-index: 10000;
   width: 100%;
   position:fixed;
@@ -25,14 +27,14 @@ $nav: rgba(0, 0, 0, 0.89);
     padding: 0;
 
   }
-  li{
+  a{
     font-weight: bold;
     font-size: 20px;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    color: rgba(255, 255, 255, 0.82);
-    border: 7px solid rgba(32, 2, 50, 0.82);
+    color: $barvapozadi;
+    border: 7px solid $barvapozadi;
     border-radius: 22px;
     padding: 4px 55px;
     width: 189px;
@@ -42,12 +44,12 @@ $nav: rgba(0, 0, 0, 0.89);
     &:hover{
       transition: background-color 1s ease, border 1s linear;
       color: white;
-      background-color: rgba(32, 2, 50, 0.82);
+      background-color: $barvapozadi;
       border: 7px solid rgba(251, 251, 251, 0.82);
     }
 
   }
-  li a{
+  a li{
 
 
     text-decoration: none;
