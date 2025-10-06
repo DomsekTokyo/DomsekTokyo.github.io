@@ -134,11 +134,11 @@ body {
 
 .logo-styly {
   position: fixed;
-  z-index: 1000;
-  max-width: 200px;
-  max-height: 10%;
+  z-index: 100000;
+  max-width: 238px;
+  height: 100px;
   right: 0;
-  top: 200px;
+  top: 175px;
   opacity: 1;
   transition: opacity 1s ease;
   visibility: visible;
@@ -147,6 +147,33 @@ body {
 @media only screen and (max-width: 400px) {
   .logo {
     max-width: 0;
+  }
+}
+.logonav {
+  position: fixed;
+  z-index: 100000;
+  max-width: 200px;
+  height: 100px;
+  right: 0;
+  top: 200px;
+  opacity: 1;
+  transition: opacity 1s ease;
+  visibility: visible;
+  top: 15px;
+  width: 235px;
+  height: 70px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .logonav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 488px) {
+  .logo {
+    width: 135px;
+    height: 56px;
+    top: 218px;
   }
 }
 
