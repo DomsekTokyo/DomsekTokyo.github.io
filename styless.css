@@ -4,6 +4,10 @@
   color: white;
 }
 
+li:hover a {
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -36,6 +40,7 @@ body {
   justify-content: center;
 }
 .navbar ul {
+  color: white;
   align-items: center;
   justify-content: center;
   list-style: none;
@@ -60,18 +65,15 @@ body {
 }
 .navbar li:hover {
   transition: background-color 1s ease, border 1s linear;
-  color: white;
   background-color: rgba(32, 2, 50, 0.82);
   border: 7px solid rgba(251, 251, 251, 0.82);
 }
-.navbar li a {
+.navbar a {
   color: rgba(32, 2, 50, 0.82);
   text-decoration: none;
 }
-.navbar li a:hover {
-  transition: background-color 1s ease;
+.navbar a:hover a {
   color: white;
-  background-color: rgba(32, 2, 50, 0.82);
 }
 .navbar {
   border-bottom: 8px solid;
