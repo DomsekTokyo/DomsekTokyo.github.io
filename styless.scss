@@ -1,4 +1,4 @@
-$nav: rgba(0, 0, 0, 0.89);
+$nav: rgba(119, 118, 118, 0.89);
 
 
 @mixin styl{
@@ -117,6 +117,21 @@ body{
 
 .navbar{
   @include styl;
+  border-bottom: 8px solid;
+  border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  animation: border-color-shift 3s linear infinite;
+
+}
+@keyframes border-color-shift {
+  0% {
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  }
+  50% {
+    border-image: linear-gradient(90deg, #0000ff, #ff0000, #00ff00, #0000ff) 1;
+  }
+  100% {
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  }
 }
 
 
@@ -220,6 +235,7 @@ body{
   width: 235px;
   height: 70px;
 
+
 }
 .ikonyfoot{
   display:flex;
@@ -231,6 +247,7 @@ body{
   .fa-brands{
     font-size: 65px;
     margin-bottom: 20px;
+
   }
 }
 //

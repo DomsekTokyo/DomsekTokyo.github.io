@@ -67,7 +67,23 @@ body {
   color: white;
   background-color: rgba(32, 2, 50, 0.82);
 }
+.navbar {
+  border-bottom: 8px solid;
+  border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  animation: border-color-shift 3s linear infinite;
+}
 
+@keyframes border-color-shift {
+  0% {
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  }
+  50% {
+    border-image: linear-gradient(90deg, #0000ff, #ff0000, #00ff00, #0000ff) 1;
+  }
+  100% {
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  }
+}
 @media only screen and (max-width: 660px) {
   .navbar ul {
     display: none;
@@ -96,7 +112,7 @@ body {
   text-decoration: none;
 }
 .mobil {
-  background-color: rgba(0, 0, 0, 0.89);
+  background-color: rgba(119, 118, 118, 0.89);
   overflow: hidden;
   opacity: 0;
   z-index: 1000;

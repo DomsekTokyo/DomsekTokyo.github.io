@@ -53,7 +53,23 @@ body {
 }
 .fa-brands{
     font-size: 60px;
+    opacity: 0.7;
 }
+.fa-brands:hover{
+
+    opacity: 1; /* plně viditelná */
+   transform:scale(1.2); /* lehce se otočí a zvětší */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+
+
+
+
+
 .responobrz {
     display: none;
 }
@@ -68,7 +84,7 @@ body {
     z-index: 50;
 
 
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/zkouska1.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("images/zkouska1.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
