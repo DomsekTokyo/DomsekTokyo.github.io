@@ -27,13 +27,13 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
     padding: 0;
 
   }
-  a{
+  li{
     font-weight: bold;
     font-size: 20px;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    color: $barvapozadi;
+
     border: 7px solid $barvapozadi;
     border-radius: 22px;
     padding: 4px 55px;
@@ -49,9 +49,9 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
     }
 
   }
-  a li{
+  li a{
 
-
+    color: $barvapozadi;
     text-decoration: none;
     &:hover{
       transition: background-color 1s ease;

@@ -44,13 +44,12 @@ body {
   margin: 0;
   padding: 0;
 }
-.navbar a {
+.navbar li {
   font-weight: bold;
   font-size: 20px;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  color: rgba(32, 2, 50, 0.82);
   border: 7px solid rgba(32, 2, 50, 0.82);
   border-radius: 22px;
   padding: 4px 55px;
@@ -59,16 +58,17 @@ body {
   text-align: center;
   height: 64px;
 }
-.navbar a:hover {
+.navbar li:hover {
   transition: background-color 1s ease, border 1s linear;
   color: white;
   background-color: rgba(32, 2, 50, 0.82);
   border: 7px solid rgba(251, 251, 251, 0.82);
 }
-.navbar a li {
+.navbar li a {
+  color: rgba(32, 2, 50, 0.82);
   text-decoration: none;
 }
-.navbar a li:hover {
+.navbar li a:hover {
   transition: background-color 1s ease;
   color: white;
   background-color: rgba(32, 2, 50, 0.82);

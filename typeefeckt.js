@@ -11,7 +11,8 @@ const fraze = [
     "Dělám weby.",
     "Dělám aplikace.",
     "Dělám malé hry.",
-    "Pracuji s excelem."
+    "Pracuji s excelem.",
+
 ]
 
 function loop(){
