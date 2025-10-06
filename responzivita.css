@@ -86,7 +86,7 @@
     .projekty .krabice-techno img { margin-left: 20px; }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
     .hlavni-heading {
         /* nová mobilní pozadí */
         background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/pozadí.jpg") !important;
