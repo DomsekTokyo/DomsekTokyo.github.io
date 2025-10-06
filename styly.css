@@ -41,6 +41,19 @@ body {
 }
 
 /* ---------header-------- */
+.ikonky{
+    z-index: 1000000;
+    position:fixed;
+    display: flex;
+    left: 15px;
+    gap: 20px;
+    top: 22px;
+
+
+}
+.fa-brands{
+    font-size: 60px;
+}
 .responobrz {
     display: none;
 }
@@ -232,7 +245,7 @@ main ul li {
 .email { margin-bottom: 10px; }
 
 footer .logotokyo img {
-    width: 100px;
+    width: 150px;
     height: auto;
     display: block;
     margin: 0 auto;

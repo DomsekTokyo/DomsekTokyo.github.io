@@ -221,10 +221,25 @@ body{
   height: 70px;
 
 }
+.ikonyfoot{
+  display:flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 
-@media only screen and (max-width: 1250px){
+
+  .fa-brands{
+    font-size: 65px;
+    margin-bottom: 20px;
+  }
+}
+//
+@media only screen and (max-width: 1270px){
   .logonav{
     display:none;
+  }
+  .ikonky{
+    display: none;
   }
 }
 @media only screen and (max-width: 488px){
