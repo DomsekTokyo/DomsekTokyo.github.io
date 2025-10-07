@@ -1,111 +1,4 @@
-$nav: rgba(0, 0, 0, 0.89);
-$barvapozadi: rgba(32, 2, 50, 0.82);
-.typer{
-  font-size: 40px;
-  color:white;
-}
-
-@mixin styl{
-
-  z-index: 10000;
-  width: 100%;
-  position:fixed;
-  display:flex;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  height: 100px;
-  align-items: center;
-  justify-content: center;
-  ul{
-    color: white;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-
-  }
-  li{
-
-    font-weight: bold;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-
-    border: 7px solid $barvapozadi;
-    border-radius: 22px;
-    padding: 4px 55px;
-    width: 189px;
-    display: flex;
-    text-align: center;
-    height: 64px;
-    &:hover{
-      transition: background-color 1s ease, border 1s linear;
-
-      background-color: $barvapozadi;
-      border: 7px solid rgba(251, 251, 251, 0.82);
-    }
-
-  }
-  a{
-
-    color: $barvapozadi;
-    text-decoration: none;
-    &:hover a {
-      color: white;
-    }
-  }
-
-
-}
-li:hover a {
-  color: white;
-}
-
-@mixin styl_ikona{
-  z-index: 10000;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  position: fixed;
-  width: 78px;
-  height: 70px;
-  right: 17px;
-  top: 7px;
-}
-
-@mixin mobil-nav{
-
-
-
-
-  width: 100%;
-  top:0;
-  position: fixed;
-
-  li{
-    margin-top:15px;
-    background-color: #ffffff;
-    color: rgba(32, 2, 50, 0.12);
-    border: 1px solid rgba(32, 2, 50, 0.82);
-    border-radius: 20px;
-    padding: 0 20px;
-    width: 100px;
-    list-style-type: none;
-    text-align: center;
-  }
-  li a{
-
-
-    text-decoration: none;
-  }
-
-}
-
+@import "mixiny";
 
 
 body{
@@ -113,13 +6,47 @@ body{
   padding: 0;
 
 }
+//-----------------header----------------//
 
-.cross,
-.hamburger{
-  @include styl_ikona;
-  display:none;
+//úprava textu v úvodu
+.TokyoUvod{
+  font-family: "Francois One", sans-serif;
+  margin-right:20px;
+  font-size:80px;
+}
+@media only screen and (max-width: 450px){
+  .TokyoUvod{
+    font-size:50px;
+  }
+  .uvodninadpis{
+    font-size:20px;
+  }
+  .typer {
+    font-size: 29px !important;
+  }
 }
 
+//kurzor//
+.typing h1 {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block; /* důležité, aby se border posouval s textem */
+  border-right: 2px solid black; /* kurzor */
+  padding-right: 2px; /* malý odstup od textu */
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: white; }
+  25%, 75% { border-color: transparent; }
+}
+.typer{
+  font-size: 40px;
+  color:white;
+}
+
+//barva pod navigací a také tlačítka
 .navbar{
   @include styl;
   border-bottom: 8px solid;
@@ -139,7 +66,22 @@ body{
   }
 }
 
+//tlačítko ------- opravit pouze se stiskne text
+li:hover a {
+  color: white;
+}
 
+
+
+
+
+
+//mobil
+.cross,
+.hamburger{
+  @include styl_ikona;
+  display:none;
+}
 
 @media only screen and (max-width: 660px){
   .navbar ul{
@@ -200,6 +142,8 @@ body{
   pointer-events: auto;
   transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
 }
+
+//logo v navigaci
 .logo {
   max-width: 0;
   transition: opacity 1s ease;
@@ -217,11 +161,7 @@ body{
   visibility: visible;
 }
 
-@media only screen and (max-width: 400px){
-  .logo{
-    max-width: 0;
-  }
-}
+
 @mixin logo{
   position: fixed;
   z-index: 100000;
@@ -242,6 +182,8 @@ body{
 
 
 }
+
+//ikony v navigaci
 .ikonyfoot{
   display:flex;
   gap: 20px;
@@ -255,7 +197,7 @@ body{
 
   }
 }
-//
+//rezponzivita loga
 @media only screen and (max-width: 1270px){
   .logonav{
     display:none;
@@ -272,39 +214,13 @@ body{
     top: 218px ;
   }
 }
-
-//kurzor//
-.typing h1 {
-  font-family: monospace;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block; /* důležité, aby se border posouval s textem */
-  border-right: 2px solid black; /* kurzor */
-  padding-right: 2px; /* malý odstup od textu */
-  animation: blink 0.7s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 50%, 100% { border-color: white; }
-  25%, 75% { border-color: transparent; }
-}
-
-
-
-.TokyoUvod{
-  font-family: "Francois One", sans-serif;
-  margin-right:20px;
-  font-size:80px;
-}
-@media only screen and (max-width: 450px){
-  .TokyoUvod{
-    font-size:50px;
-  }
-  .uvodninadpis{
-    font-size:20px;
-  }
-  .typer {
-    font-size: 29px !important;
+@media only screen and (max-width: 400px){
+  .logo{
+    max-width: 0;
   }
 }
+
+
+
+
 
