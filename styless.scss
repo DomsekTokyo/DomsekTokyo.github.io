@@ -261,6 +261,11 @@ li:hover a {
       img {
         margin: 0;
         display: block;
+        &:hover{
+
+          transform: scale(1.3);
+          transition: transform 1s ease;
+        }
       }
     }
 
