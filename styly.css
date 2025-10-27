@@ -162,33 +162,7 @@ main ul li {
 .text h1 { font-size: 55px; }
 
 /* ---------projekty-------- */
-.projekty .krabice-techno {
-    height: 20%;
-    border-radius: 10px;
-    background-color: #343840;
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-}
 
-.projekty .krabice-techno h2 {
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
-.projekty .krabice-techno img {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-.projekty .krabice-techno img:hover,
-.projekty .krabice-techno img:active {
-    transform: scale(1.2);
-    transition: 1s;
-}
 
 .projekty .logotokyo img {
     max-width: 315px;

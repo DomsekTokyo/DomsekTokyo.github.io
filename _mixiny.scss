@@ -99,3 +99,11 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
   }
 
 }
+//-------------------technologie----------------//
+@mixin pozadi{
+background-color: #454545;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 0;
+
+}
