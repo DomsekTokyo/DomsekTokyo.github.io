@@ -287,3 +287,8 @@ li:hover a {
     margin-bottom: 20px;
   }
 }
+//----------pro formulář-----------//
+.formular{
+
+@include formular;
+}

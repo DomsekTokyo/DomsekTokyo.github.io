@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@keyframes mravenci {
+  to {
+    background-position: 0 0, 16px 0;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -336,6 +341,35 @@ li:hover a {
   text-align: center;
   font-size: 50px;
   margin-bottom: 20px;
+}
+
+.formular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formular input, .formular textarea {
+  background-color: #979797;
+  font-family: monospace;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid transparent;
+  background: linear-gradient(#979797, #979797) padding-box, repeating-linear-gradient(90deg, #dcda12 0 8px, transparent 8px 16px) border-box;
+  background-position: 0 0, 0 0;
+}
+.formular input:hover, .formular textarea:hover {
+  animation: mravenci 0.6s linear infinite;
+}
+.formular textarea {
+  max-width: 500px;
+  text-align: left;
+  resize: vertical;
+  min-height: 150px;
+  max-height: 400px;
 }
 
 /*# sourceMappingURL=styless.css.map */
