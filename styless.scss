@@ -221,7 +221,6 @@ li:hover a {
 }
 
 
-
 .projects {
   h1 {
     color: white;
@@ -255,29 +254,41 @@ li:hover a {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
+      height: 160px;
 
-      img {
-        margin: 0;
-        display: block;
-        &:hover{
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 140px;
 
-          transform: scale(1.3);
-          transition: transform 1s ease;
+        img {
+          margin: 0;
+          display: block;
+          transition: transform 0.5s ease;
+
+          &:hover {
+            transform: scale(1.25);
+          }
+        }
+
+        p {
+          opacity: 0;
+          transform: translateY(10px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        &:hover p {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     }
-
-    p {
-      color: #ccc;
-      font-size: 1.1rem;
-      margin-top: 15px;
-      max-width: 700px;
-      line-height: 1.5;
-    }
   }
 }
+
 
 .projekty .krabice-techno {
   h2 {
