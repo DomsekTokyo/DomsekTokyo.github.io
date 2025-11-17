@@ -5,5 +5,13 @@
     display: block !important;
   }
 }
+@media only screen and (max-width: 440px) {
+  .ikonky {
+    display: none;
+  }
+  .navbar ul {
+    position: fixed;
+  }
+}
 
 /*# sourceMappingURL=python.css.map */
