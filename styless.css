@@ -1,0 +1,445 @@
+@charset "UTF-8";
+@keyframes mravenci {
+  to {
+    background-position: 0 0, 16px 0;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.TokyoUvod {
+  font-family: "Francois One", sans-serif;
+  margin-right: 20px;
+  font-size: 80px;
+}
+
+@media only screen and (max-width: 450px) {
+  .TokyoUvod {
+    font-size: 50px;
+  }
+  .uvodninadpis {
+    font-size: 20px;
+  }
+  .typer {
+    font-size: 29px !important;
+  }
+}
+.typing h1 {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block; /* důležité, aby se border posouval s textem */
+  border-right: 2px solid black; /* kurzor */
+  padding-right: 2px; /* malý odstup od textu */
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    border-color: white;
+  }
+  25%, 75% {
+    border-color: transparent;
+  }
+}
+.typer {
+  font-size: 40px;
+  color: white;
+}
+
+.navbar {
+  z-index: 10000;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.navbar ul {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: 7px solid rgba(32, 2, 50, 0.82);
+  border-radius: 22px;
+  padding: 4px 0;
+  width: 189px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar li:hover {
+  transition: background-color 1s ease, border 1s linear;
+  background-color: rgba(32, 2, 50, 0.82);
+  border: 7px solid rgba(251, 251, 251, 0.82);
+}
+.navbar li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: rgba(32, 2, 50, 0.82);
+}
+.navbar li a:hover {
+  color: white;
+}
+.navbar {
+  border-bottom: 8px solid;
+  border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  animation: border-color-shift 3s linear infinite;
+}
+
+@keyframes border-color-shift {
+  0% {
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  }
+  50% {
+    border-image: linear-gradient(90deg, #0000ff, #ff0000, #00ff00, #0000ff) 1;
+  }
+  100% {
+    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
+  }
+}
+li:hover a {
+  color: white;
+}
+
+.cross,
+.hamburger {
+  z-index: 10000;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  width: 78px;
+  height: 70px;
+  right: 17px;
+  top: 7px;
+  display: none;
+}
+
+@media only screen and (max-width: 660px) {
+  .navbar ul {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+.mobil {
+  width: 100%;
+  top: 0;
+  position: fixed;
+}
+.mobil li {
+  margin-top: 15px;
+  background-color: #ffffff;
+  color: rgba(32, 2, 50, 0.12);
+  border: 1px solid rgba(32, 2, 50, 0.82);
+  border-radius: 20px;
+  padding: 0 20px;
+  width: 100px;
+  list-style-type: none;
+  text-align: center;
+}
+.mobil li a {
+  text-decoration: none;
+}
+.mobil {
+  background-color: rgba(0, 0, 0, 0.89);
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1000;
+  border-bottom: 5px solid rgba(32, 2, 50, 0.82);
+  max-height: 0;
+  pointer-events: none;
+  transition: max-height 0.6s ease-in-out, opacity 1s ease, transform 1s ease;
+}
+.mobil ul {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.mobil ul li {
+  border: 7px solid rgba(32, 2, 50, 0.82);
+  width: 200px;
+  font-size: 23px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobil.mobileopen {
+  max-height: 500px;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
+}
+
+.logo {
+  max-width: 0;
+  transition: opacity 1s ease;
+}
+
+.logo-styly {
+  position: fixed;
+  z-index: 100000;
+  max-width: 238px;
+  height: 100px;
+  right: 0;
+  top: 175px;
+  opacity: 1;
+  transition: opacity 1s ease;
+  visibility: visible;
+}
+
+.logonav {
+  position: fixed;
+  z-index: 100000;
+  max-width: 200px;
+  height: 100px;
+  right: 0;
+  top: 200px;
+  opacity: 1;
+  transition: opacity 1s ease;
+  visibility: visible;
+  top: 15px;
+  width: 235px;
+  height: 70px;
+}
+
+.ikonyfoot {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.ikonyfoot .fa-brands {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1270px) {
+  .logonav {
+    display: none;
+  }
+  .ikonky {
+    display: none;
+  }
+}
+@media only screen and (max-width: 488px) {
+  .logo {
+    width: 135px;
+    height: 56px;
+    top: 218px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .logo {
+    max-width: 0;
+  }
+}
+.projects h1 {
+  color: white;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projects a {
+  display: block;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgba(32, 2, 50, 0.82);
+  background-color: white;
+  border: 5px solid rgba(32, 2, 50, 0.82);
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 10px;
+}
+.projects a:hover {
+  background-color: rgba(32, 2, 50, 0.82);
+  color: white;
+  scale: 1.1;
+  transition: 0.5s ease;
+}
+.projects .web,
+.projects .python,
+.projects .C\#,
+.projects .Microsoft,
+.projects .photoshop,
+.projects .help {
+  background-color: #454545;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 0;
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.projects .web h1,
+.projects .python h1,
+.projects .C\# h1,
+.projects .Microsoft h1,
+.projects .photoshop h1,
+.projects .help h1 {
+  color: white;
+  margin-bottom: 15px;
+}
+.projects .web .icons,
+.projects .python .icons,
+.projects .C\# .icons,
+.projects .Microsoft .icons,
+.projects .photoshop .icons,
+.projects .help .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+.projects .web .icons div,
+.projects .python .icons div,
+.projects .C\# .icons div,
+.projects .Microsoft .icons div,
+.projects .photoshop .icons div,
+.projects .help .icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.projects .web .icons div img,
+.projects .python .icons div img,
+.projects .C\# .icons div img,
+.projects .Microsoft .icons div img,
+.projects .photoshop .icons div img,
+.projects .help .icons div img {
+  margin: 0;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.projects .web .icons div img:hover,
+.projects .python .icons div img:hover,
+.projects .C\# .icons div img:hover,
+.projects .Microsoft .icons div img:hover,
+.projects .photoshop .icons div img:hover,
+.projects .help .icons div img:hover {
+  transform: scale(1.25);
+}
+.projects .web .icons div a,
+.projects .python .icons div a,
+.projects .C\# .icons div a,
+.projects .Microsoft .icons div a,
+.projects .photoshop .icons div a,
+.projects .help .icons div a {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgba(32, 2, 50, 0.82);
+  background-color: white;
+  border: 5px solid rgba(32, 2, 50, 0.82);
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 10px;
+}
+.projects .web .icons div a:hover,
+.projects .python .icons div a:hover,
+.projects .C\# .icons div a:hover,
+.projects .Microsoft .icons div a:hover,
+.projects .photoshop .icons div a:hover,
+.projects .help .icons div a:hover {
+  background-color: rgba(32, 2, 50, 0.82);
+  color: white;
+  scale: 1.1;
+  transition: 0.5s ease;
+}
+.projects .web .icons div p,
+.projects .python .icons div p,
+.projects .C\# .icons div p,
+.projects .Microsoft .icons div p,
+.projects .photoshop .icons div p,
+.projects .help .icons div p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.projects .web .icons div:hover p,
+.projects .python .icons div:hover p,
+.projects .C\# .icons div:hover p,
+.projects .Microsoft .icons div:hover p,
+.projects .photoshop .icons div:hover p,
+.projects .help .icons div:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projekty .krabice-techno h2 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.formular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formular input {
+  width: 100%;
+  max-width: 500px;
+}
+.formular input, .formular textarea {
+  background-color: #979797;
+  font-family: monospace;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid transparent;
+  background: linear-gradient(#979797, #979797) padding-box, repeating-linear-gradient(90deg, #dcda12 0 8px, transparent 8px 16px) border-box;
+  background-position: 0 0, 0 0;
+}
+.formular input:hover, .formular textarea:hover {
+  animation: mravenci 0.6s linear infinite;
+}
+.formular textarea {
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  resize: vertical;
+  min-height: 150px;
+  max-height: 400px;
+}
+
+/*# sourceMappingURL=styless.css.map */
