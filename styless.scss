@@ -38,6 +38,7 @@ body{
 
 }
 /////
+/////
 body {
   background: var(--bg);
   color: var(--text);
@@ -49,8 +50,12 @@ body {
     .nadpis-special::after{
       background-color: var(--text);
     }
-  }
 
+  }
+  .navbar{
+    background: var(--bg);
+    color: var(--text);
+  }
 
 
   transition: 0.3s ease;
@@ -60,7 +65,9 @@ body {
   .kontakty-foot p{
     color: var(--text);
   }
-
+  .projekty .krabice-techno h2{
+    color: var(--text);
+  }
 }
 
 
@@ -101,7 +108,16 @@ body:has(#check:not(:checked)) {
 }
 
 //-----------------header----------------//
+.ikonky img {
+  width: 65px;
+  height: 59px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
+.ikonky img:hover {
+  transform: scale(1.15);
+}
 //úprava textu v úvodu
 .TokyoUvod{
   font-family: "Francois One", sans-serif;

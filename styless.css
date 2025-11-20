@@ -41,6 +41,10 @@ body main .nadpis-special, body footer .nadpis-special {
 body main .nadpis-special::after, body footer .nadpis-special::after {
   background-color: var(--text);
 }
+body .navbar {
+  background: var(--bg);
+  color: var(--text);
+}
 body {
   transition: 0.3s ease;
 }
@@ -48,6 +52,9 @@ body .text p, body .text h1 {
   color: var(--text);
 }
 body .kontakty-foot p {
+  color: var(--text);
+}
+body .projekty .krabice-techno h2 {
   color: var(--text);
 }
 
@@ -83,6 +90,17 @@ body:has(#check:not(:checked)) .dark {
 }
 body:has(#check:not(:checked)) .light {
   display: inline;
+}
+
+.ikonky img {
+  width: 65px;
+  height: 59px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.ikonky img:hover {
+  transform: scale(1.15);
 }
 
 .TokyoUvod {
