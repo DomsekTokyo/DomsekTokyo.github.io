@@ -237,6 +237,10 @@ li:hover a {
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover{
+
+      scale: 1.1;
+    }
   }
 }
 
@@ -251,7 +255,7 @@ li:hover a {
  max-height: 500px;
   transform: translateY(0);
   opacity: 1;
-
+  color: rgba(32, 2, 50, 0.82);
   pointer-events: auto;
   transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
 }

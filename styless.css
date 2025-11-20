@@ -249,8 +249,7 @@ li:hover a {
 }
 .mobil li {
   margin-top: 15px;
-  background-color: #ffffff;
-  color: rgba(32, 2, 50, 0.12);
+  background-color: rgb(92, 86, 193);
   border: 1px solid rgba(32, 2, 50, 0.82);
   border-radius: 20px;
   padding: 0 20px;
@@ -259,6 +258,7 @@ li:hover a {
   text-align: center;
 }
 .mobil li a {
+  color: white;
   text-decoration: none;
 }
 .mobil {
@@ -284,11 +284,15 @@ li:hover a {
   justify-content: center;
   align-items: center;
 }
+.mobil ul li:hover {
+  scale: 1.1;
+}
 
 .mobil.mobileopen {
   max-height: 500px;
   transform: translateY(0);
   opacity: 1;
+  color: rgba(32, 2, 50, 0.82);
   pointer-events: auto;
   transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
 }

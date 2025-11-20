@@ -83,9 +83,9 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
 
   li{
     margin-top:15px;
-    background-color: #ffffff;
-    color: rgba(32, 2, 50, 0.12);
-    border: 1px solid rgba(32, 2, 50, 0.82);
+    background-color: rgba(92, 86, 193);
+
+    border: 1px solid rgba(32, 2, 50, 0.82) ;
     border-radius: 20px;
     padding: 0 20px;
     width: 100px;
@@ -94,7 +94,7 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
   }
   li a{
 
-
+    color: white;
     text-decoration: none;
   }
 
