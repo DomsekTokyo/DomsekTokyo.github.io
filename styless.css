@@ -45,6 +45,10 @@ body .navbar {
   background: var(--bg);
   color: var(--text);
 }
+body .mobil {
+  background: var(--bg);
+  color: var(--text);
+}
 body {
   transition: 0.3s ease;
 }
