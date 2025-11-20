@@ -6,6 +6,99 @@ body{
   padding: 0;
 
 }
+
+//-------------ikona moon a sun a mody----------//
+.option{
+
+  margin-right: 10px;
+  width: 105px;
+  height: 40px;
+  background: #454545;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 20000;
+  display:grid;
+  grid-template-columns: 1fr 100px;
+  p{
+
+
+    color: #fff;
+    position: absolute;
+    right: 3px;
+    top: 10px;
+
+  }
+  input[type="checkbox"]{
+    width: 25px;
+  }
+
+
+
+
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  main, footer{
+    .nadpis-special{
+      color: var(--text);
+
+    }
+    .nadpis-special::after{
+      background-color: var(--text);
+    }
+  }
+
+
+
+  transition: 0.3s ease;
+  .text p, .text h1 {
+    color: var(--text);
+  }
+  .kontakty-foot p{
+    color: var(--text);
+  }
+
+}
+
+
+body:has(#check:checked) {
+  --bg: #000000;
+  --text: #ffffff;
+  .moon{
+    display: inline;
+  }
+  .sun{
+    display: none;
+  }
+  .dark{
+    display: inline;
+  }
+  .light{
+    display: none;
+  }
+}
+
+
+body:has(#check:not(:checked)) {
+  --bg: #ffffff;
+  --text: #000000;
+  .moon{
+    display:none;
+  }
+  .sun{
+    display: inline;
+  }
+  .dark{
+    display: none;
+  }
+  .light{
+
+    display: inline;
+  }
+}
+
 //-----------------header----------------//
 
 //úprava textu v úvodu

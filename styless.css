@@ -9,6 +9,82 @@ body {
   padding: 0;
 }
 
+.option {
+  margin-right: 10px;
+  width: 105px;
+  height: 40px;
+  background: #454545;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 20000;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+.option p {
+  color: #fff;
+  position: absolute;
+  right: 3px;
+  top: 10px;
+}
+.option input[type=checkbox] {
+  width: 25px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+body main .nadpis-special, body footer .nadpis-special {
+  color: var(--text);
+}
+body main .nadpis-special::after, body footer .nadpis-special::after {
+  background-color: var(--text);
+}
+body {
+  transition: 0.3s ease;
+}
+body .text p, body .text h1 {
+  color: var(--text);
+}
+body .kontakty-foot p {
+  color: var(--text);
+}
+
+body:has(#check:checked) {
+  --bg: #000000;
+  --text: #ffffff;
+}
+body:has(#check:checked) .moon {
+  display: inline;
+}
+body:has(#check:checked) .sun {
+  display: none;
+}
+body:has(#check:checked) .dark {
+  display: inline;
+}
+body:has(#check:checked) .light {
+  display: none;
+}
+
+body:has(#check:not(:checked)) {
+  --bg: #ffffff;
+  --text: #000000;
+}
+body:has(#check:not(:checked)) .moon {
+  display: none;
+}
+body:has(#check:not(:checked)) .sun {
+  display: inline;
+}
+body:has(#check:not(:checked)) .dark {
+  display: none;
+}
+body:has(#check:not(:checked)) .light {
+  display: inline;
+}
+
 .TokyoUvod {
   font-family: "Francois One", sans-serif;
   margin-right: 20px;
