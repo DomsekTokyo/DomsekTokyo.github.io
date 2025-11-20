@@ -10,7 +10,6 @@ body {
 }
 
 .option {
-  margin-right: 10px;
   width: 105px;
   height: 40px;
   background: #454545;
@@ -338,6 +337,10 @@ li:hover a {
 .ikonyfoot .fa-brands {
   font-size: 65px;
   margin-bottom: 20px;
+}
+.ikonyfoot img:hover, .ikonyfoot img:focus, .ikonyfoot img:active, .ikonyfoot img:link {
+  scale: 1.1;
+  transition: 0.5s ease-in-out;
 }
 
 @media only screen and (max-width: 1270px) {

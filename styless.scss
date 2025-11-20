@@ -10,7 +10,7 @@ body{
 //-------------ikona moon a sun a mody----------//
 .option{
 
-  margin-right: 10px;
+
   width: 105px;
   height: 40px;
   background: #454545;
@@ -312,6 +312,12 @@ li:hover a {
     font-size: 65px;
     margin-bottom: 20px;
 
+  }
+  img{
+    &:hover, &:focus, &:active, &:link{
+      scale: 1.1;
+      transition: 0.5s ease-in-out;
+    }
   }
 }
 //rezponzivita loga
