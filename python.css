@@ -44,6 +44,10 @@
   width: 400px;
   height: 350px;
 }
+.chlivekOne .twoSec2 video, .chlivekTwo .twoSec2 video {
+  margin-top: 52px;
+  margin-right: 20px;
+}
 
 @media (max-width: 750px) {
   .chlivekOne {
