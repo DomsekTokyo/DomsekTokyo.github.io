@@ -12,7 +12,7 @@ const fraze = [
     "Dělám aplikace.",
     "Dělám malé hry.",
     "Pracuji s excelem.",
-    "Zabývám se kyberbezpečností."
+
 
 ]
 
