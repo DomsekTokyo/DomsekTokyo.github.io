@@ -30,6 +30,11 @@ body {
   width: 25px;
 }
 
+body .svetle {
+  background: var(--bg);
+  color: var(--text);
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -39,10 +44,6 @@ body main .nadpis-special, body footer .nadpis-special {
 }
 body main .nadpis-special::after, body footer .nadpis-special::after {
   background-color: var(--text);
-}
-body .navbar {
-  background: var(--bg);
-  color: var(--text);
 }
 body .mobil {
   background: var(--bg);

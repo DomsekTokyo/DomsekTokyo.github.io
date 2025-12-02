@@ -39,6 +39,14 @@ body{
 }
 /////
 /////
+body{
+  .svetle{
+
+    background: var(--bg);
+    color: var(--text);
+
+  }
+}
 body {
   background: var(--bg);
   color: var(--text);
@@ -52,10 +60,7 @@ body {
     }
 
   }
-  .navbar{
-    background: var(--bg);
-    color: var(--text);
-  }
+
 .mobil{
   background: var(--bg);
   color: var(--text);
