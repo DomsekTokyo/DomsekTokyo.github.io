@@ -1,0 +1,29 @@
+main .moje-tabulka {
+  margin:60px auto;
+  border: 1px solid white;
+
+  color: white;
+
+
+  th, td {
+    border: 1px solid white;
+    padding: 20px;
+
+  }
+  th{
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  td{
+    img{
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+body main .nadpis-special, body footer .nadpis-special {
+  margin: 150px auto 10px auto;
+  color: white;
+}
