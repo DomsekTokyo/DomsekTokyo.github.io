@@ -29,9 +29,10 @@
     .sekcejedna .text,
     .sekcedva .text,
     .sekcetri .text {
+
         text-align: center !important;
         display: block !important;
-        margin: 0 auto !important;
+        margin: 20px auto !important;
     }
 
     .navgation ul { display: none; }
