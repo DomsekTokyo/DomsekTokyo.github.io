@@ -50,12 +50,19 @@
 }
 
 @media (max-width: 750px) {
-  .chlivekOne {
+  .chlivekOne, .chlivekTwo {
     grid-template-columns: 1fr;
     text-align: center;
+    height: auto;
   }
-  .chlivekOne .twoSec img {
-    margin: 0 auto;
+  .chlivekOne .twoSec img, .chlivekOne .twoSec video,
+  .chlivekOne .twoSec2 img, .chlivekOne .twoSec2 video, .chlivekTwo .twoSec img, .chlivekTwo .twoSec video,
+  .chlivekTwo .twoSec2 img, .chlivekTwo .twoSec2 video {
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
   }
 }
 footer {

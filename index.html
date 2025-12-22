@@ -1,391 +1,573 @@
 <!DOCTYPE html>
 <html lang="cs">
-    <head>
-        <title>Dominik Mikulecký</title>
-        <meta charset="UTF-8">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Oficiální web Dominika Mikuleckého">
-        <meta property="og:title" content="Dominik Mikulecký">
+<head>
+    <title>Dominik Mikulecký</title>
+    <meta charset="UTF-8">
 
-        <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oficiální web Dominika Mikuleckého">
+    <meta property="og:title" content="Dominik Mikulecký">
 
-        <meta property="og:description" content="Osobní web a projekty Dominika Mikuleckého">
-        <link rel ="stylesheet" href = "responzivita.css">
-        <link rel="stylesheet" href="styly.css?v=6">
-        <link rel = "stylesheet" href = "grid.css">
-        <link rel="icon" type="image/png" href="images/ikona.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="images/logotokyo.png">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
 
-        <meta name="google-site-verification" content="LRxWcmWx0fL1nghSzWa_te5_PHxUV1XKptMHAFIeafI" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="styless.css">
+    <meta property="og:description" content="Osobní web a projekty Dominika Mikuleckého">
+    <link rel ="stylesheet" href = "responzivita.css">
+    <link rel="stylesheet" href="styly.css?v=6">
+    <link rel = "stylesheet" href = "grid.css">
+    <link rel="icon" type="image/png" href="images/ikona.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logotokyo.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <meta name="google-site-verification" content="LRxWcmWx0fL1nghSzWa_te5_PHxUV1XKptMHAFIeafI" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styless.css">
+</head>
 
+<body>
+<header>
+    <div class="ikonky">
+        <a href="https://www.linkedin.com/in/dominik-mikuleck%C3%BD-531710383/" target="_blank">
+            <img src="https://img.icons8.com/fluency/96/linkedin.png" alt="LinkedIn">
+        </a>
 
-    </head>
+        <a href="https://www.instagram.com/tokyo_domsek/" target="_blank">
+            <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram">
+        </a>
 
-    <body>
-        <header>
-                <div class="ikonky">
-                    <a href="https://www.linkedin.com/in/dominik-mikuleck%C3%BD-531710383/" target="_blank">
-                        <img src="https://img.icons8.com/fluency/96/linkedin.png" alt="LinkedIn">
-                    </a>
+        <a href="https://github.com/DomsekTokyo" target="_blank">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub"/>
 
-                    <a href="https://www.instagram.com/tokyo_domsek/" target="_blank">
-                        <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram">
-                    </a>
+        </a>
+    </div>
+    <nav class="navbar svetle">
+        <ul>
+            <li><a href="#" class="one">Úvod</a></li>
+            <li><a href="#" class="two" >O mně</a></li>
+            <li><a href="#" class="three">Projekty</a></li>
+            <li><a href="#" class="four">Kontakt</a></li>
 
-                    <a href="https://github.com/DomsekTokyo" target="_blank">
-                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub"/>
+        </ul>
+    </nav>
+    <img class = "logonav"src="images/logotokyo.png" />
+    <nav class="mobil">
+        <ul>
+            <li><a href="#" class="one1">Úvod</a></li>
+            <li><a href="#" class="two1" >O mně</a></li>
+            <li><a href="#" class="three1">Projekty</a></li>
+            <li><a href="#" class="four1">Kontakt</a></li>
 
-                    </a>
-                </div>
-            <nav class="navbar svetle">
-                <ul>
-                    <li><a href="#" class="one">Úvod</a></li>
-                    <li><a href="#" class="two" >O mně</a></li>
-                    <li><a href="#" class="three">Projekty</a></li>
-                    <li><a href="#" class="four">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="option check">
 
-                </ul>
-            </nav>
-            <img class = "logonav"src="images/logotokyo.png" />
-            <nav class="mobil">
-                <ul>
-                    <li><a href="#" class="one1">Úvod</a></li>
-                    <li><a href="#" class="two1" >O mně</a></li>
-                    <li><a href="#" class="three1">Projekty</a></li>
-                    <li><a href="#" class="four1">Kontakt</a></li>
+        <input type="checkbox" id="check" checked>
 
-                </ul>
-            </nav>
-            <div class="option check">
-
-                <input type="checkbox" id="check" checked>
-
-                <img src="images/Sun.png" height="40" width="40" class="sun"/>
-                <img src="images/Moon.png" height="40" width="40" class="moon"/>
-                <p class = "dark">Dark</p>
-                <p class = "light">Light</p>
+        <img src="images/Sun.png" height="40" width="40" class="sun"/>
+        <img src="images/Moon.png" height="40" width="40" class="moon"/>
+        <p class = "dark">Dark</p>
+        <p class = "light">Light</p>
 
 
-            </div>
+    </div>
 
-            <img class = "logo" src="images/logotokyo.png" alt="logotokyo"/>
-            <img src="images/cross.png" class = "cross" height="72" width="72" alt="cross"/>
-            <img class = "hamburger" src="images/hamburger.png" height="152" width="182" alt="hamburger"/>
-            <div class = "jq--uvod"></div>
-            <div class = "hlavni-obrazek-res">
+    <img class = "logo" src="images/logotokyo.png" alt="logotokyo"/>
+    <img src="images/cross.png" class = "cross" height="72" width="72" alt="cross"/>
+    <img class = "hamburger" src="images/hamburger.png" height="152" width="182" alt="hamburger"/>
+    <div class = "jq--uvod"></div>
+    <div class = "hlavni-obrazek-res">
 
 
-            <div class = "hlavni-heading">
-                
-                <div class = "hlava-text ">
-                    <h1 class = "nadpis-special uvodninadpis">Ahoj, Já jsem<br> <span class="TokyoUvod">Tokyo</span>a......</h1>
-                    <div class="text">
+        <div class = "hlavni-heading">
+
+            <div class = "hlava-text ">
+                <h1 class = "nadpis-special uvodninadpis">Ahoj, Já jsem<br> <span class="TokyoUvod">Tokyo</span>a......</h1>
+                <div class="text">
 
 
                 </div>
 
-                    <div class="typing">
-                        <h1 class = "typer"></h1>
-                    </div>
-                    
+                <div class="typing">
+                    <h1 class = "typer"></h1>
                 </div>
 
             </div>
-            </div>
-            
-            
+
+        </div>
+    </div>
 
 
-        </header>
-        <!------ sekce kterou potřebuju opravit ---->
-        <main>
-            <p class = "jq--omne schovat">.</p>
-            <div class = "empty "></div>
-            
-                <h1 class = "nadpis-special ">O mně</h1>
 
-                <div class="sekceobrazku">
-                    <div class = "stred">
-                    <ul class = "sekcejedna">
-                         <li><img class="obrazek" src="images/zkouska3.jpg" alt="Obrázek 1"></li>
-                            <li class = "text"><h1>Vzdělání a Sport</h1><br><p>Vystudoval jsem základní školu T. G. Masaryka v Litomyšli. Nyní studuji druhý ročník
-                                oboru programátor na Střední škole aplikované kybernetiky v Hradci Králové a plánuji pokračovat na vysokou školu. Rád chodím do posilovny, věnuji se boxu a občas si zajdu ven jen tak zakopat.</p></li>
-                    </ul>
+
+</header>
+<main>
+    <p class = "jq--omne schovat">.</p>
+    <div class = "empty "></div>
+
+    <h1 class = "nadpis-special ">O mně</h1>
+
+    <div class="sekceobrazku">
+        <div class = "stred">
+            <ul class = "sekcejedna">
+                <li><img class="obrazek" src="images/zkouska3.jpg" alt="Obrázek 1"></li>
+                <li class = "text"><h1>Vzdělání a Sport</h1><br><p>Vystudoval jsem základní školu T. G. Masaryka v Litomyšli. Nyní studuji druhý ročník
+                    oboru programátor na Střední škole aplikované kybernetiky v Hradci Králové a plánuji pokračovat na vysokou školu. Rád chodím do posilovny, věnuji se boxu a občas si zajdu ven jen tak zakopat.</p></li>
+            </ul>
+            <br>
+            <ul class = "sekcedva stred">
+
+                <li class = "text"><h1>Plány
+                </h1><br><p>Snažím se neustále zlepšovat v práci s weby, vytvářím malé aplikace a hry, pracuji s Excelem a zvládám základy jazyka VBA a učím se základy kyberbezpečnosti. Do budoucna plánuju rozšířit své dovednosti o C++, React a TypeScript.
+                </p></li>
+                <li><img class="obrazek" src="images/zkouska4.jpg" alt="Obrázek 1"></li>
+            </ul>
+            <br>
+            <ul class = "sekcetri">
+                <li>
+                    <img class="obrazek" src="images/zkouska2.jpg" alt="Obrázek 1">
+                </li>
+                <li class = "text">
+                    <h1>Úspěchy</h1>
                     <br>
-                    <ul class = "sekcedva stred">
-                         
-                            <li class = "text"><h1>Plány
-                                </h1><br><p>Snažím se neustále zlepšovat v práci s weby, vytvářím malé aplikace a hry, pracuji s Excelem a zvládám základy jazyka VBA a učím se základy kyberbezpečnosti. Do budoucna plánuju rozšířit své dovednosti o C++, React a TypeScript.
-                                 </p></li>
-                            <li><img class="obrazek" src="images/zkouska4.jpg" alt="Obrázek 1"></li>
-                    </ul>
-                    <br>
-                    <ul class = "sekcetri">
-                         <li>
-                            <img class="obrazek" src="images/zkouska2.jpg" alt="Obrázek 1">
-                        </li>
-                            <li class = "text">
-                                <h1>Úspěchy</h1>
-                                <br>
-                                <p>Jsem velmi aktivní a mám za sebou několik zajímavých úspěchů. Snažím se nejen získávat certifikáty, ale také vytvářet kvalitní a hodnotné projekty. Veškeré své certifikáty a ukázky práce najdete na mém GitHubu a LinkedInu.
-                                     </p>
-                            </li>
-                    </ul>
-                    </div>
-                </div>
-            <!------ sekce kterou potřebuju opravit ---->
-            <section class="row projekty">
-                <p class="jq--projekty schovat">.</p>
-                <h1 class="nadpis-special">Projekty</h1>
+                    <p>Jsem velmi aktivní a mám za sebou několik zajímavých úspěchů. Snažím se nejen získávat certifikáty, ale také vytvářet kvalitní a hodnotné projekty. Veškeré své certifikáty a ukázky práce najdete na mém GitHubu a LinkedInu.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="row projekty">
+        <p class="jq--projekty schovat">.</p>
+        <h1 class="nadpis-special">Projekty</h1>
 
-                <div class="krabice-techno">
-                    <h2>Technologie, které používám</h2>
+        <div class="krabice-techno">
+            <h2>Technologie, které používám</h2>
 
-                    <div class="projects content">
+            <div class="projects content">
 
-                        <!-- WEB -->
-                        <div class="web">
-                            <h1>Web development</h1>
-                            <div class="icons">
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript icon">
-                                    <p>JavaScript</p>
-                                    <a class="credit" href="https://icons8.com/icon/108784/javascript">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML5 icon">
-                                    <p>HTML</p>
-                                    <a class="credit" href="https://icons8.com/icon/20909/html-5">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/css3.png" alt="CSS icon">
-                                    <p>CSS</p>
-                                    <a class="credit" href="https://icons8.com/icon/21278/css3">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="SASS icon">
-                                    <p>SASS</p>
-                                    <a class="credit" href="https://icons8.com/icon/13966/sass">Ikona od Icons8</a>
-                                </div>
-                            </div>
-                            <a href="Javascriptprojekty.html">Projekty</a>
-                            <p>Tvorba webových stránek</p>
+                <div class="web">
+                    <h1>Web development</h1>
+                    <div class="icons">
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript icon">
+                            <p>JavaScript</p>
+                            <a class="credit" href="https://icons8.com/icon/108784/javascript">Ikona od Icons8</a>
                         </div>
 
-                        <!-- PYTHON -->
-                        <div class="python">
-                            <h1>Python</h1>
-                            <div class="icons">
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/python.png" alt="Python icon">
-                                    <p>Python</p>
-                                    <a class="credit" href="https://icons8.com/icon/13441/python">Ikona od Icons8</a>
-                                    <a href="pythonProjects.html">Projekty</a>
-                                </div>
-                            </div>
-                            <p>Tvorba mini her, aplikací, WebScraping</p>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML5 icon">
+                            <p>HTML</p>
+                            <a class="credit" href="https://icons8.com/icon/20909/html-5">Ikona od Icons8</a>
                         </div>
 
-                        <!-- C# -->
-                        <div class="C#">
-                            <h1>C#</h1>
-                            <div class="icons">
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/nolan/96/c-sharp-logo.png" alt="C# icon">
-                                    <p>C#</p>
-                                    <a class="credit" href="https://icons8.com/icon/55251/c-sharp-logo">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/unity.png" alt="Unity icon">
-                                    <p>Unity</p>
-                                    <a class="credit" href="https://icons8.com/icon/39848/unity">Ikona od Icons8</a>
-                                </div>
-                            </div>
-                            <a href="CSProjects.html">Projekty</a>
-                            <p>Vývoj aplikací a her</p>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/css3.png" alt="CSS icon">
+                            <p>CSS</p>
+                            <a class="credit" href="https://icons8.com/icon/21278/css3">Ikona od Icons8</a>
                         </div>
 
-                        <!-- MICROSOFT -->
-                        <div class="Microsoft">
-                            <h1>Microsoft</h1>
-                            <div class="icons">
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/windows-10.png" alt="Windows icon">
-                                    <p>Windows</p>
-                                    <a class="credit" href="https://icons8.com/icon/20906/windows-10">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel icon">
-                                    <p>Excel</p>
-                                    <a class="credit" href="https://icons8.com/icon/FlEwOKkrlACr/microsoft-excel-2019">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-word-2019--v2.png" alt="Word icon">
-                                    <p>Word</p>
-                                    <a class="credit" href="https://icons8.com/icon/XDvtXUtSYu5n/microsoft-word-2019">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png" alt="PowerPoint icon">
-                                    <p>PowerPoint</p>
-                                    <a class="credit" href="https://icons8.com/icon/LL4jRZy1cY6g/microsoft-powerpoint-2019">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-access-2019.png" alt="Access icon">
-                                    <p>Access</p>
-                                    <a class="credit" href="https://icons8.com/icon/11237/microsoft-access-2019">Ikona od Icons8</a>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="microsoft-outlook-2019"/>
-                                    <p>Outlook</p>
-                                    <a class="credit" href="https://icons8.com/icon/11237/microsoft-access-2019">Ikona od Icons8</a>
-                                </div>
-                            </div>
-                            <p>Práce s technologiemi od Microsoftu</p>
-                        </div>
-
-                        <!-- GRAFIKA -->
-                        <div class="photoshop">
-                            <h1>Grafika</h1>
-                            <div class="icons">
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/canva.png" alt="Canva icon">
-                                    <p>Canva</p>
-                                    <a class="credit" href="https://icons8.com/icon/Hz2ogCwRU8Wq/canva">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/3d-fluency/94/adobe-photoshop.png" alt="Photoshop icon">
-                                    <p>Adobe Photoshop</p>
-                                    <a class="credit" href="https://icons8.com/icon/13664/adobe-photoshop">Ikona od Icons8</a>
-                                </div>
-
-                                <div>
-                                    <img width="90" height="90" src="https://img.icons8.com/external-others-inmotus-design/67/external-adobe-adobe-acrobat-pdf-others-inmotus-design.png" alt="Adobe Acrobat icon">
-                                    <p>Adobe Acrobat</p>
-                                    <a class="credit" href="https://icons8.com/icon/13476/adobe-acrobat">Ikona od Icons8</a>
-                                </div>
-                            </div>
-                            <a href="grafika.html">Projekty</a>
-                            <p>Úprava a tvorba grafiky</p>
-
-
-                        </div>
-
-                        <!---- Ostatní blbosti ----->
-                        <div class="help">
-                            <h1>Nástroje</h1>
-                            <div class="icons">
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/kali-linux.png" alt="kali-linux"/>
-                                    <p>Linux-Kali</p>
-                                </div>
-
-                                <div>
-                                    <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github"/>
-                                    <p>Github</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/git.png" alt="git"/>
-                                    <p>Git</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio--v2.png" alt="visual-studio--v2"/>
-                                    <p>Visual Studio</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio-code-2019.png" alt="visual-studio-code-2019"/>
-                                    <p>Vs Code</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/webstorm.png" alt="webstorm"/>
-                                    <p>Webstorm</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo"/>
-                                    <p>Postman</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/arduino.png" alt="arduino"/>
-                                    <p>Arduino</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/brave-web-browser.png" alt="brave-web-browser"/>
-                                    <p>Brave</p>
-                                </div>
-                                <div>
-                                    <img width="96" height="96" src="https://img.icons8.com/color/96/old-vmware-logo.png" alt="old-vmware-logo"/>
-                                    <p>VMware</p>
-                                </div>
-
-                            </div>
-                            <p>Práce s nástroji</p>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="SASS icon">
+                            <p>SASS</p>
+                            <a class="credit" href="https://icons8.com/icon/13966/sass">Ikona od Icons8</a>
                         </div>
                     </div>
+                    <a href="Javascriptprojekty.html">Projekty</a>
+                    <p>Tvorba webových stránek</p>
                 </div>
-            </section>
 
-
-
-
-
-        </main>
-        
-        <footer>
-            <div class = "row kontakty-foot ">
-                <div>
-                    <h1 class = "nadpis-special jq--kontakty">Kontakt</h1>
-                    <form class="formular" action="https://formspree.io/f/xkgknpel" method="POST">
-
-                        <input type="text" name="name" placeholder="Jméno" required>
-
-                        <input type="email" name="email" placeholder="Email" required><br>
-
-                        <textarea name="message" placeholder="Zpráva" rows="4" cols="50" required></textarea><br>
-
-                        <input type="submit" value="Odeslat">
-
-                    </form>
+                <div class="python">
+                    <h1>Python</h1>
+                    <div class="icons">
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/python.png" alt="Python icon">
+                            <p>Python</p>
+                            <a class="credit" href="https://icons8.com/icon/13441/python">Ikona od Icons8</a>
+                            <a href="pythonProjects.html">Projekty</a>
+                        </div>
+                    </div>
+                    <p>Tvorba mini her, aplikací, WebScraping</p>
                 </div>
-                <p> <span class = "main-email">Email</span> <br><span class = "email">mikuleckydominik@gmail.com</span></p>
-                <div class="ikonyfoot">
-                    <a href="https://www.linkedin.com/in/dominik-mikuleck%C3%BD-531710383/" target="_blank">
-                        <img src="https://img.icons8.com/fluency/96/linkedin.png" alt="LinkedIn">
-                    </a>
 
-                    <a href="https://www.instagram.com/tokyo_domsek/" target="_blank">
-                        <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram">
-                    </a>
+                <div class="C#">
+                    <h1>C#</h1>
+                    <div class="icons">
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/nolan/96/c-sharp-logo.png" alt="C# icon">
+                            <p>C#</p>
+                            <a class="credit" href="https://icons8.com/icon/55251/c-sharp-logo">Ikona od Icons8</a>
+                        </div>
 
-                    <a href="https://github.com/DomsekTokyo" target="_blank">
-                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub"/>
-
-                    </a>
+                        <div>
+                            <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/unity.png" alt="Unity icon">
+                            <p>Unity</p>
+                            <a class="credit" href="https://icons8.com/icon/39848/unity">Ikona od Icons8</a>
+                        </div>
+                    </div>
+                    <a href="CSProjects.html">Projekty</a>
+                    <p>Vývoj aplikací a her</p>
                 </div>
-                <div class="logotokyo">
-                    <a href = "#"><img src = "images/logotokyo.png" alt = "logo tokyo s lebkou"></a>
-                </div> 
-                <div class = "footer-text">
-                    <p>&copy; 2025 Dominik Mikulecký. Všechna práva vyhrazena.<br>Vytvořeno v Litomyšli<br>Tokyo</p>
+
+                <div class="Microsoft">
+                    <h1>Microsoft</h1>
+                    <div class="icons">
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/windows-10.png" alt="Windows icon">
+                            <p>Windows</p>
+                            <a class="credit" href="https://icons8.com/icon/20906/windows-10">Ikona od Icons8</a>
+                        </div>
+
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel icon">
+                            <p>Excel</p>
+                            <a class="credit" href="https://icons8.com/icon/FlEwOKkrlACr/microsoft-excel-2019">Ikona od Icons8</a>
+                        </div>
+
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-word-2019--v2.png" alt="Word icon">
+                            <p>Word</p>
+                            <a class="credit" href="https://icons8.com/icon/XDvtXUtSYu5n/microsoft-word-2019">Ikona od Icons8</a>
+                        </div>
+
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png" alt="PowerPoint icon">
+                            <p>PowerPoint</p>
+                            <a class="credit" href="https://icons8.com/icon/LL4jRZy1cY6g/microsoft-powerpoint-2019">Ikona od Icons8</a>
+                        </div>
+
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-access-2019.png" alt="Access icon">
+                            <p>Access</p>
+                            <a class="credit" href="https://icons8.com/icon/11237/microsoft-access-2019">Ikona od Icons8</a>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="microsoft-outlook-2019"/>
+                            <p>Outlook</p>
+                            <a class="credit" href="https://icons8.com/icon/11237/microsoft-access-2019">Ikona od Icons8</a>
+                        </div>
+                    </div>
+                    <p>Práce s technologiemi od Microsoftu</p>
                 </div>
-                
+
+                <div class="photoshop">
+                    <h1>Grafika</h1>
+                    <div class="icons">
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/canva.png" alt="Canva icon">
+                            <p>Canva</p>
+                            <a class="credit" href="https://icons8.com/icon/Hz2ogCwRU8Wq/canva">Ikona od Icons8</a>
+                        </div>
+
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/3d-fluency/94/adobe-photoshop.png" alt="Photoshop icon">
+                            <p>Adobe Photoshop</p>
+                            <a class="credit" href="https://icons8.com/icon/13664/adobe-photoshop">Ikona od Icons8</a>
+                        </div>
+
+                        <div>
+                            <img width="90" height="90" src="https://img.icons8.com/external-others-inmotus-design/67/external-adobe-adobe-acrobat-pdf-others-inmotus-design.png" alt="Adobe Acrobat icon">
+                            <p>Adobe Acrobat</p>
+                            <a class="credit" href="https://icons8.com/icon/13476/adobe-acrobat">Ikona od Icons8</a>
+                        </div>
+                    </div>
+                    <a href="grafika.html">Projekty</a>
+                    <p>Úprava a tvorba grafiky</p>
+
+
+                </div>
+
+                <div class="help">
+                    <h1>Nástroje</h1>
+                    <div class="icons">
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/kali-linux.png" alt="kali-linux"/>
+                            <p>Linux-Kali</p>
+                        </div>
+
+                        <div>
+                            <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github"/>
+                            <p>Github</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/git.png" alt="git"/>
+                            <p>Git</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio--v2.png" alt="visual-studio--v2"/>
+                            <p>Visual Studio</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio-code-2019.png" alt="visual-studio-code-2019"/>
+                            <p>Vs Code</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/webstorm.png" alt="webstorm"/>
+                            <p>Webstorm</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo"/>
+                            <p>Postman</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/arduino.png" alt="arduino"/>
+                            <p>Arduino</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/brave-web-browser.png" alt="brave-web-browser"/>
+                            <p>Brave</p>
+                        </div>
+                        <div>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/old-vmware-logo.png" alt="old-vmware-logo"/>
+                            <p>VMware</p>
+                        </div>
+
+                    </div>
+                    <p>Práce s nástroji</p>
+                </div>
             </div>
-            
-        </footer>
-        <script src="efekty.js"></script>
-        <script src="typeefeckt.js"></script>
-    </body>
+        </div>
+    </section>
+
+
+
+
+
+</main>
+
+<footer>
+    <div class = "row kontakty-foot ">
+        <div>
+            <h1 class = "nadpis-special jq--kontakty">Kontakt</h1>
+            <form class="formular" action="https://formspree.io/f/xkgknpel" method="POST">
+
+                <input type="text" name="name" placeholder="Jméno" required>
+
+                <input type="email" name="email" placeholder="Email" required><br>
+
+                <textarea name="message" placeholder="Zpráva" rows="4" cols="50" required></textarea><br>
+
+                <input type="submit" value="Odeslat">
+
+            </form>
+        </div>
+        <p> <span class = "main-email">Email</span> <br><span class = "email">mikuleckydominik@gmail.com</span></p>
+        <div class="ikonyfoot">
+            <a href="https://www.linkedin.com/in/dominik-mikuleck%C3%BD-531710383/" target="_blank">
+                <img src="https://img.icons8.com/fluency/96/linkedin.png" alt="LinkedIn">
+            </a>
+
+            <a href="https://www.instagram.com/tokyo_domsek/" target="_blank">
+                <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram">
+            </a>
+
+            <a href="https://github.com/DomsekTokyo" target="_blank">
+                <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub"/>
+
+            </a>
+        </div>
+        <div class="logotokyo">
+            <a href = "#"><img src = "images/logotokyo.png" alt = "logo tokyo s lebkou"></a>
+        </div>
+        <div class = "footer-text">
+            <p>&copy; 2025 Dominik Mikulecký. Všechna práva vyhrazena.<br>Vytvořeno v Litomyšli<br>Tokyo</p>
+        </div>
+
+    </div>
+
+</footer>
+<script src="efekty.js"></script>
+<script src="typeefeckt.js"></script>
+
+<style>
+    /* Styly pro chatovací tlačítko a okno */
+    #chat-widget-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #00ff41; /* Hacker Green */
+        color: black;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+    #chat-widget-button:hover { transform: scale(1.1); }
+
+    #chat-window {
+        display: none;
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        width: 350px;
+        height: 500px;
+        background-color: #1e1e1e;
+        border: 2px solid #00ff41;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        z-index: 1000;
+        flex-direction: column;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    #chat-header {
+        background-color: #00ff41;
+        color: black;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 1px solid #333;
+    }
+
+    #chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        color: #ddd;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 8px 12px;
+        border-radius: 15px;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+    .user-msg {
+        align-self: flex-end;
+        background-color: #007acc;
+        color: white;
+    }
+    .bot-msg {
+        align-self: flex-start;
+        background-color: #333;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+    }
+
+    #chat-input-area {
+        padding: 10px;
+        border-top: 1px solid #333;
+        display: flex;
+    }
+    #chat-input {
+        flex: 1;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #555;
+        background: #2d2d2d;
+        color: white;
+    }
+    #chat-send {
+        background: #00ff41;
+        border: none;
+        padding: 8px 15px;
+        margin-left: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+</style>
+
+<button id="chat-widget-button" onclick="toggleChat()">🤖</button>
+
+<div id="chat-window">
+    <div id="chat-header">MegaBot v1.0</div>
+    <div id="chat-messages">
+        <div class="message bot-msg">Ahoj! Jsem MegaBot. Zeptej se mě na cokoliv (Wiki, Matika), nebo si jen pokecáme.</div>
+    </div>
+    <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Napiš zprávu..." onkeypress="handleEnter(event)">
+        <button id="chat-send" onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+<script>
+
+    const API_URL = "https://dominiktokyo.pythonanywhere.com/";
+
+    let learningMode = false;
+    let lastUnknownQuestion = "";
+
+    function toggleChat() {
+        const win = document.getElementById("chat-window");
+        win.style.display = win.style.display === "none" || win.style.display === "" ? "flex" : "none";
+    }
+
+    function handleEnter(e) {
+        if (e.key === "Enter") sendMessage();
+    }
+
+    async function sendMessage() {
+        const input = document.getElementById("chat-input");
+        const text = input.value.trim();
+        if (!text) return;
+
+        addMessage(text, "user-msg");
+        input.value = "";
+
+        if (learningMode) {
+            await teachBot(text);
+        } else {
+            await askBot(text);
+        }
+    }
+
+    async function askBot(text) {
+        try {
+            const response = await fetch(`${API_URL}/chat`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ zprava: text })
+            });
+            const data = await response.json();
+
+            addMessage(data.odpoved, "bot-msg");
+
+            if (data.typ === "uceni") {
+                learningMode = true;
+                lastUnknownQuestion = text;
+            }
+
+        } catch (error) {
+            addMessage("Chyba: Server neodpovídá. Zkontroluj adresu v kódu!", "bot-msg");
+            console.error(error);
+        }
+    }
+
+    async function teachBot(answer) {
+        try {
+            const response = await fetch(`${API_URL}/ucit`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ otazka: lastUnknownQuestion, odpoved: answer })
+            });
+            const data = await response.json();
+
+            addMessage("Díky! Naučil jsem se to.", "bot-msg");
+            learningMode = false;
+            lastUnknownQuestion = "";
+
+        } catch (error) {
+            addMessage("Chyba při učení.", "bot-msg");
+        }
+    }
+
+    function addMessage(text, className) {
+        const div = document.createElement("div");
+        div.className = `message ${className}`;
+        div.innerText = text;
+        const container = document.getElementById("chat-messages");
+        container.appendChild(div);
+        container.scrollTop = container.scrollHeight;
+    }
+</script>
+
+</body>
 
 </html>

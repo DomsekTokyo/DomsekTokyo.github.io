@@ -71,12 +71,20 @@
 
 
 @media (max-width: 750px) {
-  .chlivekOne {
+
+  .chlivekOne, .chlivekTwo {
     grid-template-columns: 1fr;
     text-align: center;
+    height: auto;
 
-    .twoSec img {
-      margin: 0 auto;
+
+    .twoSec img, .twoSec video,
+    .twoSec2 img, .twoSec2 video {
+      margin: 20px auto;
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
     }
   }
 }
