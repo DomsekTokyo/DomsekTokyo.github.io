@@ -204,7 +204,7 @@ body:has(#check:not(:checked)) .light {
   border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
   animation: border-color-shift 3s linear infinite;
 }
-
+/* fafafaf */
 @keyframes border-color-shift {
   0% {
     border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
