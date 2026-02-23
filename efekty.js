@@ -1,115 +1,145 @@
 const scrollMap = [
-    { btn: ".one", target: ".jq--uvod" },
-    { btn: ".two", target: ".jq--omne" },
-    { btn: ".three", target: ".projekty" },
+    { btn: ".one",  target: ".jq--uvod" },
+    { btn: ".two",  target: ".jq--omne" },
+    { btn: ".three",target: ".projekty" },
     { btn: ".four", target: ".kontakty-foot" },
 ];
-let logo = document.querySelector(".logo")
-const navbar = document.querySelector(".navbar");
-const navmobile = document.querySelector(".mobil");
-const ham = document.querySelector(".hamburger");
-const cross = document.querySelector(".cross");
-let vyska = navbar.offsetHeight;
-
-scrollMap.forEach(item => {
-    const btn = document.querySelector(item.btn);
-
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-
-
-        const target = document.querySelector(item.target);
-        const kam = target.getBoundingClientRect().top + window.scrollY;
-
-
-        window.scrollTo({
-            top: kam - vyska,
-            behavior: "smooth"
-        });
-
-
-    });
-});
-
-
 
 const scrollMap2 = [
-    { btn: ".one1", target: ".jq--uvod" },
-    { btn: ".two1", target: ".jq--omne" },
-    { btn: ".three1", target: ".projekty" },
+    { btn: ".one1",  target: ".jq--uvod" },
+    { btn: ".two1",  target: ".jq--omne" },
+    { btn: ".three1",target: ".projekty" },
     { btn: ".four1", target: ".kontakty-foot" },
 ];
 
+let logo      = document.querySelector(".logo");
+const navbar   = document.querySelector(".navbar");
+const navmobile= document.querySelector(".mobil");
+const ham      = document.querySelector(".hamburger");
+const cross    = document.querySelector(".cross");
+const option   = document.querySelector(".option");   // přepínač tématu
 
-scrollMap2.forEach(item => {
-    const btn = document.querySelector(item.btn);
+let vyska = navbar.offsetHeight;
 
-    btn.addEventListener("click", (e) => {
+// ── scroll helper ──────────────────────────────────────
+function scrollTo(targetSelector, offset) {
+    const target = document.querySelector(targetSelector);
+    if (!target) return;
+    const kam = target.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: kam - offset, behavior: "smooth" });
+}
+
+// desktop nav
+scrollMap.forEach(({ btn, target }) => {
+    const el = document.querySelector(btn);
+    if (!el) return;
+    el.addEventListener("click", (e) => {
         e.preventDefault();
-
-        // Přepočítat pozici cíle
-        const target = document.querySelector(item.target);
-        const kam = target.getBoundingClientRect().top + window.scrollY;
-
-        // Dynamicky zjistit viditelné menu
-
-
-        // Scroll
-        window.scrollTo({
-            top: kam - 150,
-            behavior: "smooth"
-        });
-
-
+        scrollTo(target, vyska);
     });
 });
 
-//halo
-function checkwindow(){
-    if (window.innerWidth > 660) {
+// mobilní nav
+scrollMap2.forEach(({ btn, target }) => {
+    const el = document.querySelector(btn);
+    if (!el) return;
+    el.addEventListener("click", (e) => {
+        e.preventDefault();
+        zavritMobil();                  // zavřít menu před scrollem
+        setTimeout(() => scrollTo(target, 20), 350);
+    });
+});
 
-        navmobile.style.opacity = "0";
-        logo.style.opacity = "0";
-        navmobile.classList.remove("mobileopen");
-        navbar.style.display = "flex";
-        logo.classList.add("logo-styly");
-        ham.style.display = "none";
-        cross.style.display = "none";
+// ── mobil helpers ──────────────────────────────────────
+function otevritMobil() {
+    navbar.style.display = "none";
+    ham.style.display    = "none";
 
-    } else {
+    // křížek – přesuneme ho do horního pravého rohu mobilního menu
+    cross.style.position = "absolute";
+    cross.style.top      = "8px";
+    cross.style.right    = "8px";
+    cross.style.zIndex   = "10001";
+    // musíme ho dát jako child do .mobil, aby se správně pozicoval
+    if (!navmobile.contains(cross)) {
+        navmobile.appendChild(cross);
+    }
+    cross.style.display = "flex";
 
-        ham.style.display = "flex";
-        ham.addEventListener("click", () => {
+    navmobile.classList.add("mobileopen");
+    logo.classList.add("logo-styly");
+    logo.style.opacity = "1";
 
-            setTimeout(() => { logo.style.display = "flex"; }, 500);
-            logo.classList.add("logo-styly");
-            ham.style.display = "none";
-
-            cross.style.display = "flex";
-            logo.style.opacity = "1";
-            navmobile.style.opacity = "1";
-            navbar.style.display = "none";
-            navmobile.classList.add("mobileopen");
-
-        });
-
-        cross.addEventListener("click", () => {
-            navmobile.classList.remove("mobileopen");
-
-            ham.style.display = "flex";
-            logo.style.opacity = "0";
-            logo.classList.remove("logo-styly");
-            cross.style.display = "none";
-
-            setTimeout(() => { navbar.style.display = "flex"; }, 400);
-        });
-
+    // přepínač přesuneme pod otevřené menu, aby nepřekrýval tlačítka
+    if (option) {
+        option.style.top = navmobile.scrollHeight + 110 + "px";
     }
 }
 
-// Spustí při načtení stránky
-checkwindow();
+function zavritMobil() {
+    navmobile.classList.remove("mobileopen");
+    ham.style.display   = "flex";
+    cross.style.display = "none";
+    logo.style.opacity  = "0";
+    logo.classList.remove("logo-styly");
 
-// Spustí při změně velikosti okna
+    // vrátíme křížek zpět do headeru a obnovíme fixed pozici
+    const header = document.querySelector("header");
+    if (header && !header.contains(cross)) {
+        header.appendChild(cross);
+    }
+    cross.style.position = "fixed";
+    cross.style.top      = "7px";
+    cross.style.right    = "17px";
+
+    // přepínač vrátíme na původní pozici
+    if (option) {
+        option.style.top = "100px";
+    }
+
+    setTimeout(() => { navbar.style.display = "flex"; }, 400);
+}
+
+function checkwindow() {
+    if (window.innerWidth > 660) {
+        // desktop – reset všeho
+        navmobile.style.opacity = "0";
+        logo.style.opacity      = "0";
+        navmobile.classList.remove("mobileopen");
+        navbar.style.display    = "flex";
+        logo.classList.add("logo-styly");
+        ham.style.display       = "none";
+        cross.style.display     = "none";
+
+        if (option) option.style.top = "100px";
+
+    } else {
+        // mobil
+        navbar.style.display = "none";
+        ham.style.display    = "flex";
+
+        // přidáváme listenery jen jednou – ochrana proti duplicitám
+        if (!ham.dataset.bound) {
+            ham.addEventListener("click", otevritMobil);
+            cross.addEventListener("click", zavritMobil);
+            ham.dataset.bound = "1";
+        }
+    }
+}
+
+// ── init ───────────────────────────────────────────────
+checkwindow();
 window.addEventListener("resize", checkwindow);
 
+// ── dynamická pozice přepínače při otevřeném menu ──────
+// pokud se výška mobilního menu změní (animace), přepočítáme
+const observer = new MutationObserver(() => {
+    if (navmobile.classList.contains("mobileopen") && option) {
+        // počkáme na konec CSS animace (max-height transition ~1s)
+        setTimeout(() => {
+            option.style.top = navmobile.offsetHeight + 110 + "px";
+        }, 650);
+    }
+});
+
+observer.observe(navmobile, { attributes: true, attributeFilter: ["class"] });

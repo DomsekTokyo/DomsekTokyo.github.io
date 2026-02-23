@@ -1,8 +1,25 @@
-/* ---------Responzivita-------- */
+/* ══════════════════════════════════════════
+   RESPONZIVITA – Dominik Mikulecký
+   Breakpointy: 1200 → 830 → 650 → 578 → 480 → 450 → 356
+══════════════════════════════════════════ */
+
+/* ── křížek – zmenšení na mobilu ── */
+@media only screen and (max-width: 660px) {
+    .cross {
+        width: 38px !important;
+        height: 38px !important;
+        top: 12px !important;
+        right: 12px !important;
+        opacity: 0.85;
+    }
+}
+
+/* ── 1200px – schování ikon v navigaci ── */
 @media only screen and (max-width: 1200px) {
     nav .ikony { display: none; }
 }
 
+/* ── 830px – zmenšení nav tlačítek ── */
 @media only screen and (max-width: 830px) {
     .navbar ul li {
         width: 150px;
@@ -11,39 +28,68 @@
     }
 }
 
+/* ── 650px – sekce "O mně" na mobilu ── */
 @media only screen and (max-width: 650px) {
 
-    .sekcejedna, .sekcedva, .sekcetri {
+    /* všechny sekce do sloupce */
+    .sekcejedna,
+    .sekcedva,
+    .sekcetri {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
     }
 
-
+    /* obrázek sekcedva jde pod text */
     .sekcedva {
         flex-direction: column-reverse !important;
     }
 
-
+    /* text bloky vycentrovat */
     .sekcejedna .text,
     .sekcedva .text,
     .sekcetri .text {
-
         text-align: center !important;
         display: block !important;
         margin: 20px auto !important;
     }
 
+    /* obrázky v sekcích – plná šířka na malých obrazovkách */
+    .sekcejedna .obrazek,
+    .sekcedva .obrazek,
+    .sekcetri .obrazek {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        border-radius: 12px;
+    }
+
     .navgation ul { display: none; }
 }
 
+/* ── 578px – malý spodní offset úvodního textu ── */
 @media only screen and (max-width: 578px) {
     .hlavni-heading .hlava-text {
         margin-bottom: 45px;
     }
 }
 
+/* ── 480px – mobilní pozadí hlavičky ──
+   Sloučeno s původním 450px blokem pro pozadí,
+   sdílí stejné nastavení → jeden breakpoint stačí */
+@media only screen and (max-width: 480px) {
+    .hlavni-heading {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/pozadí.jpg") !important;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        min-height: 500px;
+    }
+}
+
+/* ── 450px – drobné úpravy pro nejmenší telefony ── */
 @media only screen and (max-width: 450px) {
     .soon {
         margin: 0 2px;
@@ -80,32 +126,56 @@
         position: relative;
         bottom: 30px;
     }
+
+    /* projekty ikony – sjednocený margin místo tří breakpointů */
+    .projekty .krabice-techno img {
+        margin-left: 20px;
+    }
 }
 
-@media only screen and (max-width: 477px) {
-    .projekty .krabice-techno img { margin-left: 20px; }
-}
-
-@media only screen and (max-width: 440px) {
-    .projekty .krabice-techno img { margin-left: 40px; }
-}
-
+/* ── 356px – nejužší telefony ── */
 @media only screen and (max-width: 356px) {
-    .projekty .krabice-techno img { margin-left: 20px; }
+    .projekty .krabice-techno img {
+        margin-left: 10px;
+    }
+
+    h1 { font-size: 36px !important; }
+
+    .TokyoUvod { font-size: 40px !important; }
 }
 
+/* ── chat widget – mobilní fix ── */
 @media only screen and (max-width: 480px) {
-    .hlavni-heading {
-        /* nová mobilní pozadí */
-        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/pozadí.jpg") !important;
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
+    #chat-window {
+        width: calc(100vw - 20px) !important;
+        right: 10px !important;
+        left: 10px !important;
+        bottom: 85px !important;
+    }
 
-        /* odstraníme fixed na mobilu */
-        background-attachment: scroll;
+    #chat-widget-button {
+        right: 10px !important;
+        bottom: 15px !important;
+    }
+}
 
-        /* upravená výška pro mobil */
-        min-height: 500px;
+/* ── chat widget – oprava překrývání na mobilu ── */
+@media only screen and (max-width: 600px) {
+    #chat-window {
+        width: calc(100vw - 24px) !important;
+        right: 12px !important;
+        left: 12px !important;
+        /* omezená výška aby nezabíralo celou obrazovku */
+        height: 55vh !important;
+        max-height: 380px !important;
+        bottom: 80px !important;
+    }
+
+    #chat-widget-button {
+        right: 12px !important;
+        bottom: 12px !important;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 24px !important;
     }
 }

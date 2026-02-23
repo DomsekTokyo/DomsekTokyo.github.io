@@ -2,19 +2,20 @@ $nav: rgba(0, 0, 0, 0.89);
 $barvapozadi: rgba(32, 2, 50, 0.82);
 
 //navigace tlačítka
-@mixin styl{
+@mixin styl {
 
   z-index: 10000;
   width: 100%;
-  position:fixed;
-  display:flex;
+  position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   background-color: #000000;
   height: 100px;
   align-items: center;
   justify-content: center;
-  ul{
+
+  ul {
     color: white;
     align-items: center;
     justify-content: center;
@@ -23,8 +24,8 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
     gap: 20px;
     margin: 0;
     padding: 0;
-
   }
+
   li {
     font-weight: bold;
     font-size: 20px;
@@ -37,11 +38,14 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
     display: flex;
     align-items: center;
     justify-content: center;
+    // plynulejší hover bez skoku
+    transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 
     &:hover {
-      transition: background-color 1s ease, border 1s linear;
       background-color: $barvapozadi;
       border: 7px solid rgba(251, 251, 251, 0.82);
+      // malý glow efekt při hoveru
+      box-shadow: 0 4px 18px rgba(32, 2, 50, 0.45);
     }
 
     a {
@@ -52,15 +56,16 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
       height: 100%;
       text-decoration: none;
       color: $barvapozadi;
+      transition: color 0.25s ease;
 
       &:hover {
         color: white;
       }
     }
-
   }
 }
-@mixin styl_ikona{
+
+@mixin styl_ikona {
   z-index: 10000;
   display: flex;
   justify-content: left;
@@ -72,40 +77,43 @@ $barvapozadi: rgba(32, 2, 50, 0.82);
   top: 7px;
 }
 
-@mixin mobil-nav{
-
-
-
+@mixin mobil-nav {
 
   width: 100%;
-  top:0;
+  top: 0;
   position: fixed;
 
-  li{
-    margin-top:15px;
+  li {
+    margin-top: 15px;
     background-color: rgba(92, 86, 193);
-
-    border: 1px solid rgba(32, 2, 50, 0.82) ;
+    border: 1px solid rgba(32, 2, 50, 0.82);
     border-radius: 20px;
     padding: 0 20px;
     width: 100px;
     list-style-type: none;
     text-align: center;
-  }
-  li a{
+    // plynulý hover i na mobilu
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
+    &:hover {
+      box-shadow: 0 4px 14px rgba(92, 86, 193, 0.5);
+    }
+  }
+
+  li a {
     color: white;
     text-decoration: none;
   }
-
 }
+
 //-------------------technologie----------------//
-@mixin pozadi{
-background-color: #454545;
+@mixin pozadi {
+  background-color: #454545;
   padding: 10px;
   border-radius: 10px;
   margin: 20px 0;
-
+  // jemný stín pro hloubku
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -116,22 +124,23 @@ background-color: #454545;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  input{
+
+  input {
     width: 100%;
     max-width: 500px;
   }
+
   input, textarea {
     background-color: #979797;
-
-    font-family: monospace,"Francois One","Helvetica", sans-serif;
+    font-family: monospace, "Francois One", "Helvetica", sans-serif;
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
-
-
     border: 4px solid transparent;
+    // outline pryč, místo toho vlastní focus styl
+    outline: none;
 
     background: linear-gradient(#979797, #979797) padding-box,
     repeating-linear-gradient(
@@ -140,11 +149,17 @@ background-color: #454545;
                     transparent 8px 16px
     ) border-box;
 
-
     background-position: 0 0, 0 0;
+    transition: box-shadow 0.3s ease;
 
     &:hover {
       animation: mravenci 0.6s linear infinite;
+    }
+
+    // focus styl — žlutý glow místo výchozího modrého outline
+    &:focus {
+      animation: mravenci 0.6s linear infinite;
+      box-shadow: 0 0 0 3px rgba(220, 218, 18, 0.45);
     }
   }
 
@@ -155,6 +170,31 @@ background-color: #454545;
     resize: vertical;
     min-height: 150px;
     max-height: 400px;
+  }
+
+  // submit tlačítko
+  input[type="submit"] {
+    cursor: pointer;
+    background: linear-gradient(#dcda12, #dcda12) padding-box,
+    repeating-linear-gradient(
+                    90deg,
+                    $barvapozadi 0 8px,
+                    transparent 8px 16px
+    ) border-box;
+    color: $barvapozadi;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      animation: mravenci 0.6s linear infinite;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(220, 218, 18, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
   }
 }
 

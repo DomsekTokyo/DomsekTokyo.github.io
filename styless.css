@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes mravenci {
   to {
     background-position: 0 0, 16px 0;
@@ -10,15 +9,17 @@ body {
 }
 
 .option {
-  width: 105px;
-  height: 40px;
-  background: #454545;
+  width: 135px;
+  height: 50px;
+  background: #0d1117;
   position: fixed;
   top: 100px;
-  right: 0;
+  right: 13px;
   z-index: 20000;
   display: grid;
   grid-template-columns: 1fr 100px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 .option p {
   color: #fff;
@@ -38,6 +39,7 @@ body .svetle {
 body {
   background: var(--bg);
   color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 body main .nadpis-special, body footer .nadpis-special {
   color: var(--text);
@@ -49,9 +51,6 @@ body .mobil {
   background: var(--bg);
   color: var(--text);
 }
-body {
-  transition: 0.3s ease;
-}
 body .text p, body .text h1 {
   color: var(--text);
 }
@@ -62,49 +61,100 @@ body .projekty .krabice-techno h2 {
   color: var(--text);
 }
 
-body:has(#check:checked) {
-  --bg: #000000;
+:root {
+  --bg: #0d1117;
   --text: #ffffff;
 }
-body:has(#check:checked) .moon {
-  display: inline;
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
-body:has(#check:checked) .sun {
-  display: none;
-}
-body:has(#check:checked) .dark {
-  display: inline;
-}
-body:has(#check:checked) .light {
+
+.sun {
   display: none;
 }
 
-body:has(#check:not(:checked)) {
+.moon {
+  display: inline;
+}
+
+.theme-icon-sun {
+  opacity: 0.5;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.theme-icon-moon {
+  opacity: 1;
+  color: #6ea8fe;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #6ea8fe;
+  border-color: #6ea8fe;
+}
+
+.option {
+  box-shadow: 0 4px 20px rgba(110, 168, 254, 0.25);
+}
+
+.scale-08 {
+  transform: scale(1.2);
+  transform-origin: left center;
+}
+
+.mini-theme-wrapper .form-check-input {
+  width: 2.2em !important;
+  height: 1.25em !important;
+  margin-top: 0.25em;
+}
+
+.bg-dark {
+  background-color: transparent !important;
+}
+
+.sun, .moon {
+  transition: opacity 0.3s ease;
+}
+
+body:has(#themeSwitch:not(:checked)) {
   --bg: #ffffff;
-  --text: #000000;
+  --text: #212529;
 }
-body:has(#check:not(:checked)) .moon {
-  display: none;
-}
-body:has(#check:not(:checked)) .sun {
+body:has(#themeSwitch:not(:checked)) .sun {
   display: inline;
 }
-body:has(#check:not(:checked)) .dark {
+body:has(#themeSwitch:not(:checked)) .moon {
   display: none;
 }
-body:has(#check:not(:checked)) .light {
-  display: inline;
+body:has(#themeSwitch:not(:checked)) .theme-icon-sun {
+  opacity: 1;
+  color: #ffc107;
+}
+body:has(#themeSwitch:not(:checked)) .theme-icon-moon {
+  opacity: 0.5;
+  color: inherit;
+}
+body:has(#themeSwitch:not(:checked)) .form-check-input {
+  background-color: initial;
+  border-color: initial;
+}
+body:has(#themeSwitch:not(:checked)) .option {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .ikonky img {
   width: 65px;
   height: 59px;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ikonky img:hover {
   transform: scale(1.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .TokyoUvod {
@@ -128,9 +178,9 @@ body:has(#check:not(:checked)) .light {
   font-family: monospace, "Francois One", "Helvetica", sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  display: inline-block; /* důležité, aby se border posouval s textem */
-  border-right: 2px solid black; /* kurzor */
-  padding-right: 2px; /* malý odstup od textu */
+  display: inline-block;
+  border-right: 2px solid black;
+  padding-right: 2px;
   animation: blink 0.7s step-end infinite;
 }
 
@@ -181,11 +231,12 @@ body:has(#check:not(:checked)) .light {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 .navbar li:hover {
-  transition: background-color 1s ease, border 1s linear;
   background-color: rgba(32, 2, 50, 0.82);
   border: 7px solid rgba(251, 251, 251, 0.82);
+  box-shadow: 0 4px 18px rgba(32, 2, 50, 0.45);
 }
 .navbar li a {
   display: flex;
@@ -195,6 +246,7 @@ body:has(#check:not(:checked)) .light {
   height: 100%;
   text-decoration: none;
   color: rgba(32, 2, 50, 0.82);
+  transition: color 0.25s ease;
 }
 .navbar li a:hover {
   color: white;
@@ -256,6 +308,10 @@ li:hover a {
   width: 100px;
   list-style-type: none;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mobil li:hover {
+  box-shadow: 0 4px 14px rgba(92, 86, 193, 0.5);
 }
 .mobil li a {
   color: white;
@@ -283,9 +339,10 @@ li:hover a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease;
 }
 .mobil ul li:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 .mobil.mobileopen {
@@ -339,9 +396,11 @@ li:hover a {
   font-size: 65px;
   margin-bottom: 20px;
 }
-.ikonyfoot img:hover, .ikonyfoot img:focus, .ikonyfoot img:active, .ikonyfoot img:link {
-  scale: 1.1;
-  transition: 0.5s ease-in-out;
+.ikonyfoot img {
+  transition: transform 0.3s ease-in-out;
+}
+.ikonyfoot img:hover, .ikonyfoot img:focus {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1270px) {
@@ -364,16 +423,12 @@ li:hover a {
     max-width: 0;
   }
 }
-.projects h1 {
-  color: white;
-}
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.projects a {
-  display: block;
+.projects .web .icons div a,
+.projects .python .icons div a,
+.projects .C\# .icons div a,
+.projects .Microsoft .icons div a,
+.projects .photoshop .icons div a,
+.projects .help .icons div a, .projects a {
   font-family: monospace, "Francois One", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 15px;
@@ -384,12 +439,29 @@ li:hover a {
   border-radius: 10px;
   padding: 16px;
   margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
-.projects a:hover {
+.projects .web .icons div a:hover,
+.projects .python .icons div a:hover,
+.projects .C\# .icons div a:hover,
+.projects .Microsoft .icons div a:hover,
+.projects .photoshop .icons div a:hover,
+.projects .help .icons div a:hover, .projects a:hover {
   background-color: rgba(32, 2, 50, 0.82);
   color: white;
-  scale: 1.1;
-  transition: 0.5s ease;
+  transform: scale(1.1);
+}
+
+.projects h1 {
+  color: white;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projects a {
+  display: block;
 }
 .projects .web,
 .projects .python,
@@ -401,6 +473,7 @@ li:hover a {
   padding: 10px;
   border-radius: 10px;
   margin: 20px 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   width: 100%;
   padding: 30px 0;
   display: flex;
@@ -449,7 +522,7 @@ li:hover a {
 .projects .help .icons div img {
   margin: 0;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 .projects .web .icons div img:hover,
 .projects .python .icons div img:hover,
@@ -459,34 +532,6 @@ li:hover a {
 .projects .help .icons div img:hover {
   transform: scale(1.25);
 }
-.projects .web .icons div a,
-.projects .python .icons div a,
-.projects .C\# .icons div a,
-.projects .Microsoft .icons div a,
-.projects .photoshop .icons div a,
-.projects .help .icons div a {
-  font-family: monospace, "Francois One", sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  text-decoration: none;
-  color: rgba(32, 2, 50, 0.82);
-  background-color: white;
-  border: 5px solid rgba(32, 2, 50, 0.82);
-  border-radius: 10px;
-  padding: 16px;
-  margin-top: 10px;
-}
-.projects .web .icons div a:hover,
-.projects .python .icons div a:hover,
-.projects .C\# .icons div a:hover,
-.projects .Microsoft .icons div a:hover,
-.projects .photoshop .icons div a:hover,
-.projects .help .icons div a:hover {
-  background-color: rgba(32, 2, 50, 0.82);
-  color: white;
-  scale: 1.1;
-  transition: 0.5s ease;
-}
 .projects .web .icons div p,
 .projects .python .icons div p,
 .projects .C\# .icons div p,
@@ -495,7 +540,7 @@ li:hover a {
 .projects .help .icons div p {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .projects .web .icons div:hover p,
 .projects .python .icons div:hover p,
@@ -533,11 +578,17 @@ li:hover a {
   padding: 10px;
   border-radius: 10px;
   border: 4px solid transparent;
+  outline: none;
   background: linear-gradient(#979797, #979797) padding-box, repeating-linear-gradient(90deg, #dcda12 0 8px, transparent 8px 16px) border-box;
   background-position: 0 0, 0 0;
+  transition: box-shadow 0.3s ease;
 }
 .formular input:hover, .formular textarea:hover {
   animation: mravenci 0.6s linear infinite;
+}
+.formular input:focus, .formular textarea:focus {
+  animation: mravenci 0.6s linear infinite;
+  box-shadow: 0 0 0 3px rgba(220, 218, 18, 0.45);
 }
 .formular textarea {
   width: 100%;
@@ -546,6 +597,22 @@ li:hover a {
   resize: vertical;
   min-height: 150px;
   max-height: 400px;
+}
+.formular input[type=submit] {
+  cursor: pointer;
+  background: linear-gradient(#dcda12, #dcda12) padding-box, repeating-linear-gradient(90deg, rgba(32, 2, 50, 0.82) 0 8px, transparent 8px 16px) border-box;
+  color: rgba(32, 2, 50, 0.82);
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.formular input[type=submit]:hover {
+  animation: mravenci 0.6s linear infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(220, 218, 18, 0.4);
+}
+.formular input[type=submit]:active {
+  transform: translateY(0);
 }
 
 .credit {

@@ -1,117 +1,158 @@
 @import "mixiny";
 
-
-body{
+body {
   margin: 0;
   padding: 0;
-
 }
 
 //-------------ikona moon a sun a mody----------//
-.option{
-
-
-  width: 105px;
-  height: 40px;
-  background: #454545;
+.option {
+  width: 135px;
+  height: 50px;
+  background: #0d1117;
   position: fixed;
   top: 100px;
-  right: 0;
+  right: 13px;
   z-index: 20000;
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 100px;
-  p{
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 
-
+  p {
     color: #fff;
     position: absolute;
     right: 3px;
     top: 10px;
-
   }
-  input[type="checkbox"]{
+
+  input[type="checkbox"] {
     width: 25px;
   }
-
-
-
-
 }
-/////
-/////
-body{
-  .svetle{
 
+//------ light/dark proměnné ------//
+body {
+  .svetle {
     background: var(--bg);
     color: var(--text);
-
   }
 }
+
 body {
   background: var(--bg);
   color: var(--text);
-  main, footer{
-    .nadpis-special{
-      color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
 
+  main, footer {
+    .nadpis-special {
+      color: var(--text);
     }
-    .nadpis-special::after{
+    .nadpis-special::after {
       background-color: var(--text);
     }
-
   }
 
-.mobil{
-  background: var(--bg);
-  color: var(--text);
-}
+  .mobil {
+    background: var(--bg);
+    color: var(--text);
+  }
 
-  transition: 0.3s ease;
   .text p, .text h1 {
     color: var(--text);
   }
-  .kontakty-foot p{
+
+  .kontakty-foot p {
     color: var(--text);
   }
-  .projekty .krabice-techno h2{
+
+  .projekty .krabice-techno h2 {
     color: var(--text);
   }
 }
 
-
-body:has(#check:checked) {
-  --bg: #000000;
+// ── výchozí stav = TMAVÝ ──
+:root {
+  --bg:   #0d1117;
   --text: #ffffff;
-  .moon{
-    display: inline;
-  }
-  .sun{
-    display: none;
-  }
-  .dark{
-    display: inline;
-  }
-  .light{
-    display: none;
-  }
 }
 
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-body:has(#check:not(:checked)) {
-  --bg: #ffffff;
-  --text: #000000;
-  .moon{
-    display:none;
-  }
-  .sun{
-    display: inline;
-  }
-  .dark{
-    display: none;
-  }
-  .light{
+//------ výchozí ikony: tmavý režim = měsíc ------//
+.sun  { display: none; }
+.moon { display: inline; }
 
-    display: inline;
+.theme-icon-sun {
+  opacity: 0.5;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.theme-icon-moon {
+  opacity: 1;
+  color: #6ea8fe;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+// switch modrý ve výchozím dark stavu
+.form-check-input:checked {
+  background-color: #6ea8fe;
+  border-color: #6ea8fe;
+}
+
+// dark mode option glow – výchozí
+.option {
+  box-shadow: 0 4px 20px rgba(110, 168, 254, 0.25);
+}
+
+.scale-08 {
+  transform: scale(1.2);
+  transform-origin: left center;
+}
+
+.mini-theme-wrapper .form-check-input {
+  width: 2.2em !important;
+  height: 1.25em !important;
+  margin-top: 0.25em;
+}
+
+.bg-dark {
+  background-color: transparent !important;
+}
+
+.sun, .moon {
+  transition: opacity 0.3s ease;
+}
+
+//------ po odškrtnutí = SVĚTLÝ režim ------//
+body:has(#themeSwitch:not(:checked)) {
+  --bg:   #ffffff;
+  --text: #212529;
+
+  .sun  { display: inline; }
+  .moon { display: none; }
+
+  .theme-icon-sun {
+    opacity: 1;
+    color: #ffc107;
+  }
+
+  .theme-icon-moon {
+    opacity: 0.5;
+    color: inherit;
+  }
+
+  .form-check-input {
+    background-color: initial;
+    border-color: initial;
+  }
+
+  .option {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -120,108 +161,93 @@ body:has(#check:not(:checked)) {
   width: 65px;
   height: 59px;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ikonky img:hover {
   transform: scale(1.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
-//úprava textu v úvodu
-.TokyoUvod{
-  font-family: "Francois One","Helvetica", sans-serif;
-  margin-right:20px;
-  font-size:80px;
+
+//------ úprava textu v úvodu ------//
+.TokyoUvod {
+  font-family: "Francois One", "Helvetica", sans-serif;
+  margin-right: 20px;
+  font-size: 80px;
 }
-@media only screen and (max-width: 450px){
-  .TokyoUvod{
-    font-size:50px;
+
+@media only screen and (max-width: 450px) {
+  .TokyoUvod {
+    font-size: 50px;
   }
-  .uvodninadpis{
-    font-size:20px;
+  .uvodninadpis {
+    font-size: 20px;
   }
   .typer {
     font-size: 29px !important;
   }
 }
-///fafaf///
-//kurzor//
+
+//------ kurzor ------//
 .typing h1 {
-  font-family: monospace,"Francois One","Helvetica", sans-serif;
+  font-family: monospace, "Francois One", "Helvetica", sans-serif;
   white-space: nowrap;
   overflow: hidden;
-  display: inline-block; /* důležité, aby se border posouval s textem */
-  border-right: 2px solid black; /* kurzor */
-  padding-right: 2px; /* malý odstup od textu */
+  display: inline-block;
+  border-right: 2px solid black;
+  padding-right: 2px;
   animation: blink 0.7s step-end infinite;
 }
 
 @keyframes blink {
   0%, 50%, 100% { border-color: white; }
-  25%, 75% { border-color: transparent; }
-}
-.typer{
-  font-size: 40px;
-  color:white;
+  25%, 75%      { border-color: transparent; }
 }
 
-//barva pod navigací a také tlačítka
-.navbar{
+.typer {
+  font-size: 40px;
+  color: white;
+}
+
+//------ navbar ------//
+.navbar {
   @include styl;
   border-bottom: 8px solid;
   border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
   animation: border-color-shift 3s linear infinite;
-
 }
+
 @keyframes border-color-shift {
-  0% {
-    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
-  }
-  50% {
-    border-image: linear-gradient(90deg, #0000ff, #ff0000, #00ff00, #0000ff) 1;
-  }
-  100% {
-    border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
-  }
+  0%   { border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1; }
+  50%  { border-image: linear-gradient(90deg, #0000ff, #ff0000, #00ff00, #0000ff) 1; }
+  100% { border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1; }
 }
 
-//tlačítko ------- opravit pouze se stiskne text
 li:hover a {
   color: white;
 }
 
-
-
-
-
-
-//mobil
+//------ mobil ------//
 .cross,
-.hamburger{
+.hamburger {
   @include styl_ikona;
-  display:none;
+  display: none;
 }
 
-@media only screen and (max-width: 660px){
-  .navbar ul{
+@media only screen and (max-width: 660px) {
+  .navbar ul {
     display: none;
   }
-  .hamburger{
+  .hamburger {
     display: flex;
   }
 }
 
-
-
-
-
-
 .mobil {
   @include mobil-nav;
 
-
   background-color: $nav;
-  overflow: hidden ;
-
+  overflow: hidden;
   opacity: 0;
   z-index: 1000;
   border-bottom: 5px solid rgba(32, 2, 50, 0.82);
@@ -242,22 +268,16 @@ li:hover a {
     display: flex;
     justify-content: center;
     align-items: center;
-    &:hover{
+    transition: transform 0.2s ease;
 
-      scale: 1.1;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
 
-
-
-
-
-
-
 .mobil.mobileopen {
-
- max-height: 500px;
+  max-height: 500px;
   transform: translateY(0);
   opacity: 1;
   color: rgba(32, 2, 50, 0.82);
@@ -265,7 +285,7 @@ li:hover a {
   transition: max-height 1s ease-in-out, opacity 1s ease, transform 1s ease;
 }
 
-//logo v navigaci
+//------ logo ------//
 .logo {
   max-width: 0;
   transition: opacity 1s ease;
@@ -283,8 +303,7 @@ li:hover a {
   visibility: visible;
 }
 
-
-@mixin logo{
+@mixin logo {
   position: fixed;
   z-index: 100000;
   max-width: 200px;
@@ -296,58 +315,74 @@ li:hover a {
   visibility: visible;
 }
 
-.logonav{
+.logonav {
   @include logo;
-  top:15px;
+  top: 15px;
   width: 235px;
   height: 70px;
-
-
 }
 
-//ikony v navigaci
-.ikonyfoot{
-  display:flex;
+//------ ikony footer ------//
+.ikonyfoot {
+  display: flex;
   gap: 20px;
   align-items: center;
   justify-content: center;
 
-
-  .fa-brands{
+  .fa-brands {
     font-size: 65px;
     margin-bottom: 20px;
-
   }
-  img{
-    &:hover, &:focus, &:active, &:link{
-      scale: 1.1;
-      transition: 0.5s ease-in-out;
+
+  img {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover, &:focus {
+      transform: scale(1.1);
     }
   }
 }
-//rezponzivita loga
-@media only screen and (max-width: 1270px){
-  .logonav{
-    display:none;
-  }
-  .ikonky{
-    display: none;
-  }
-}
-@media only screen and (max-width: 488px){
-  .logo{
-    width: 135px ;
-    height: 56px ;
 
-    top: 218px ;
+//------ responzivita loga ------//
+@media only screen and (max-width: 1270px) {
+  .logonav { display: none; }
+  .ikonky  { display: none; }
+}
+
+@media only screen and (max-width: 488px) {
+  .logo {
+    width: 135px;
+    height: 56px;
+    top: 218px;
   }
 }
-@media only screen and (max-width: 400px){
-  .logo{
+
+@media only screen and (max-width: 400px) {
+  .logo {
     max-width: 0;
   }
 }
 
+//------ projekty ------//
+%project-link {
+  font-family: monospace, "Francois One", "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgba(32, 2, 50, 0.82);
+  background-color: white;
+  border: 5px solid rgba(32, 2, 50, 0.82);
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: rgba(32, 2, 50, 0.82);
+    color: white;
+    transform: scale(1.1);
+  }
+}
 
 .projects {
   h1 {
@@ -357,26 +392,12 @@ li:hover a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  a{
-    display:block;
-    font-family: monospace,"Francois One","Helvetica", sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    text-decoration: none;
-    color: rgba(32, 2, 50, 0.82);
-    background-color: white;
-    border: 5px solid rgba(32, 2, 50, 0.82);
-    border-radius: 10px;
-    padding: 16px;
-    margin-top: 10px;
-    &:hover{
-      background-color: rgba(32, 2, 50, 0.82);
-      color: white;
-      scale: 1.1;
-      transition: 0.5s ease;
 
-    }
+  a {
+    @extend %project-link;
+    display: block;
   }
+
   .web,
   .python,
   .C\#,
@@ -404,7 +425,6 @@ li:hover a {
       align-items: flex-start;
       gap: 10px;
 
-
       div {
         display: flex;
         flex-direction: column;
@@ -414,36 +434,21 @@ li:hover a {
         img {
           margin: 0;
           display: block;
-          transition: transform 0.5s ease;
+          transition: transform 0.3s ease;
 
           &:hover {
             transform: scale(1.25);
           }
         }
-        //----------odkaz na projekty----------//
-        a{
-          font-family: monospace,"Francois One", sans-serif;
-          font-weight: bold;
-          font-size: 15px;
-          text-decoration: none;
-          color: rgba(32, 2, 50, 0.82);
-          background-color: white;
-          border: 5px solid rgba(32, 2, 50, 0.82);
-          border-radius: 10px;
-          padding: 16px;
-          margin-top: 10px;
-          &:hover{
-            background-color: rgba(32, 2, 50, 0.82);
-            color: white;
-            scale: 1.1;
-            transition: 0.5s ease;
 
-          }
+        a {
+          @extend %project-link;
         }
+
         p {
           opacity: 0;
           transform: translateY(10px);
-          transition: opacity 0.5s ease, transform 0.5s ease;
+          transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
         &:hover p {
@@ -455,7 +460,6 @@ li:hover a {
   }
 }
 
-
 .projekty .krabice-techno {
   h2 {
     color: white;
@@ -464,14 +468,13 @@ li:hover a {
     margin-bottom: 20px;
   }
 }
-//----------pro formulář-----------//
-.formular{
 
-@include formularr;
+//------ formulář ------//
+.formular {
+  @include formularr;
 }
 
-
-//credit pro copyright//
+//------ credit ------//
 .credit {
   display: block !important;
   font-size: 10px !important;
@@ -480,6 +483,4 @@ li:hover a {
   border: none !important;
   margin-top: 4px;
   text-decoration: none;
-
-
 }

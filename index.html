@@ -3,146 +3,151 @@
 <head>
     <title>Dominik Mikulecký</title>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Oficiální web Dominika Mikuleckého">
     <meta property="og:title" content="Dominik Mikulecký">
+    <meta property="og:description" content="Osobní web a projekty Dominika Mikuleckého">
+    <meta name="google-site-verification" content="LRxWcmWx0fL1nghSzWa_te5_PHxUV1XKptMHAFIeafI" />
 
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <meta property="og:description" content="Osobní web a projekty Dominika Mikuleckého">
-    <link rel ="stylesheet" href = "responzivita.css">
-    <link rel="stylesheet" href="styly.css?v=6">
-    <link rel = "stylesheet" href = "grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="responzivita.css">
+    <link rel="stylesheet" href="styly.css?v=7">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="styless.css">
+
     <link rel="icon" type="image/png" href="images/ikona.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/logotokyo.png">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <meta name="google-site-verification" content="LRxWcmWx0fL1nghSzWa_te5_PHxUV1XKptMHAFIeafI" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styless.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 <header>
+    <!-- sociální ikony -->
     <div class="ikonky">
-        <a href="https://www.linkedin.com/in/dominik-mikulecky-531710383/" target="_blank">
+        <a href="https://www.linkedin.com/in/dominik-mikulecky-531710383/" target="_blank" rel="noopener">
             <img src="https://img.icons8.com/fluency/96/linkedin.png" alt="LinkedIn">
         </a>
-
-        <a href="https://www.instagram.com/dominik_ajtak/" target="_blank">
+        <a href="https://www.instagram.com/dominik_ajtak/" target="_blank" rel="noopener">
             <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram">
         </a>
-
-        <a href="https://github.com/DomsekTokyo" target="_blank">
-            <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub"/>
-
+        <a href="https://github.com/DomsekTokyo" target="_blank" rel="noopener">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub">
         </a>
     </div>
-    <nav class="navbar svetle">
+
+    <!-- desktop nav -->
+    <nav class="navbar svetle" aria-label="Hlavní navigace">
         <ul>
             <li><a href="#" class="one">Úvod</a></li>
-            <li><a href="#" class="two" >O mně</a></li>
+            <li><a href="#" class="two">O mně</a></li>
             <li><a href="#" class="three">Projekty</a></li>
             <li><a href="#" class="four">Kontakt</a></li>
-
         </ul>
     </nav>
-    <img class = "logonav"src="images/logotokyo.png" />
-    <nav class="mobil">
+
+    <img class="logonav" src="images/logotokyo.png" alt="Logo Tokyo">
+
+    <!-- mobilní nav -->
+    <nav class="mobil" aria-label="Mobilní navigace">
         <ul>
             <li><a href="#" class="one1">Úvod</a></li>
-            <li><a href="#" class="two1" >O mně</a></li>
+            <li><a href="#" class="two1">O mně</a></li>
             <li><a href="#" class="three1">Projekty</a></li>
             <li><a href="#" class="four1">Kontakt</a></li>
-
         </ul>
     </nav>
-    <div class="option check">
 
-        <input type="checkbox" id="check" checked>
-
-        <img src="images/Sun.png" height="40" width="40" class="sun"/>
-        <img src="images/Moon.png" height="40" width="40" class="moon"/>
-        <p class = "dark">Dark</p>
-        <p class = "light">Light</p>
-
-
-    </div>
-
-    <img class = "logo" src="images/logotokyo.png" alt="logotokyo"/>
-    <img src="images/cross.png" class = "cross" height="72" width="72" alt="cross"/>
-    <img class = "hamburger" src="images/hamburger.png" height="152" width="182" alt="hamburger"/>
-    <div class = "jq--uvod"></div>
-    <div class = "hlavni-obrazek-res">
-
-
-        <div class = "hlavni-heading">
-
-            <div class = "hlava-text ">
-                <h1 class = "nadpis-special uvodninadpis">Ahoj, Já jsem<br> <span class="TokyoUvod">Tokyo</span>a......</h1>
-                <div class="text">
-
-
-                </div>
-
-                <div class="typing">
-                    <h1 class = "typer"></h1>
-                </div>
-
+    <!-- přepínač tématu -->
+    <div class="option check d-flex justify-content-start ms-3 mt-2 mini-theme-wrapper">
+        <div class="d-flex align-items-center gap-2">
+            <div class="position-relative" style="width: 30px; height: 30px; margin-left: 9px;">
+                <img src="images/Sun.png" height="30" width="30" class="sun position-absolute top-0 start-0" alt="Světlý režim">
+                <img src="images/Moon.png" height="30" width="30" class="moon position-absolute top-0 start-0" alt="Tmavý režim">
             </div>
-
+            <div class="d-flex align-items-center gap-1 px-3 py-0 bg-dark scale-08">
+                <label for="themeSwitch" class="theme-icon-sun" style="cursor: pointer;" title="Světlý režim">
+                    <i class="bi bi-sun-fill fs-6"></i>
+                </label>
+                <div class="form-check form-switch mb-0">
+                    <input class="form-check-input" type="checkbox" role="switch"
+                           id="themeSwitch" style="cursor: pointer;"
+                           aria-label="Přepnout téma" checked>
+                </div>
+                <label for="themeSwitch" class="theme-icon-moon" style="cursor: pointer;" title="Tmavý režim">
+                    <i class="bi bi-moon-stars-fill fs-6"></i>
+                </label>
+            </div>
         </div>
     </div>
 
+    <img class="logo" src="images/logotokyo.png" alt="logotokyo">
+    <img src="images/cross.png" class="cross" height="72" width="72" alt="Zavřít menu">
+    <img class="hamburger" src="images/hamburger.png" height="152" width="182" alt="Otevřít menu">
 
+    <div class="jq--uvod"></div>
 
-
+    <div class="hlavni-obrazek-res">
+        <div class="hlavni-heading">
+            <div class="hlava-text">
+                <h1 class="nadpis-special uvodninadpis">Ahoj, Já jsem<br> <span class="TokyoUvod">Tokyo</span>a......</h1>
+                <div class="text"></div>
+                <div class="typing">
+                    <h1 class="typer"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
+
 <main>
-    <!---- booostrap --->
-    <div class="alert alert-success alert-dismissible fade show container" role="alert">
+    <!-- update banner -->
+    <div class="alert alert-success alert-dismissible fade show container mt-3" role="alert">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-info-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16">
             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
         </svg>
         <strong>Update</strong> Brzy proběhne update webu
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zavřít"></button>
     </div>
-    <p class = "jq--omne schovat">.</p>
-    <div class = "empty "></div>
 
-    <h1 class = "nadpis-special ">O mně</h1>
+    <p class="jq--omne schovat">.</p>
+    <div class="empty"></div>
+
+    <!-- O mně -->
+    <h1 class="nadpis-special">O mně</h1>
 
     <div class="sekceobrazku">
-        <div class = "stred">
-            <ul class = "sekcejedna">
-                <li><img class="obrazek" src="images/zkouska3.jpg" alt="Obrázek 1"></li>
-                <li class = "text"><h1>Vzdělání a Sport</h1><br><p>Vystudoval jsem základní školu T. G. Masaryka v Litomyšli. Nyní studuji druhý ročník
-                    oboru programátor na Střední škole aplikované kybernetiky v Hradci Králové a plánuji pokračovat na vysokou školu. Rád chodím do posilovny, věnuji se boxu a občas si zajdu ven jen tak zakopat.</p></li>
-            </ul>
-            <br>
-            <ul class = "sekcedva stred">
-
-                <li class = "text"><h1>Plány
-                </h1><br><p>Snažím se neustále zlepšovat v práci s weby, vytvářím malé aplikace a hry, pracuji s Excelem a zvládám základy jazyka VBA a učím se základy kyberbezpečnosti. Do budoucna plánuju rozšířit své dovednosti o C++, React a TypeScript.
-                </p></li>
-                <li><img class="obrazek" src="images/zkouska4.jpg" alt="Obrázek 1"></li>
-            </ul>
-            <br>
-            <ul class = "sekcetri">
-                <li>
-                    <img class="obrazek" src="images/zkouska2.jpg" alt="Obrázek 1">
+        <div class="stred">
+            <ul class="sekcejedna">
+                <li><img class="obrazek" src="images/zkouska3.jpg" alt="Vzdělání a sport"></li>
+                <li class="text">
+                    <h1>Vzdělání a Sport</h1><br>
+                    <p>Vystudoval jsem základní školu T. G. Masaryka v Litomyšli. Nyní studuji druhý ročník oboru programátor na Střední škole aplikované kybernetiky v Hradci Králové a plánuji pokračovat na vysokou školu. Rád chodím do posilovny, věnuji se boxu a občas si zajdu ven jen tak zakopat.</p>
                 </li>
-                <li class = "text">
-                    <h1>Úspěchy</h1>
-                    <br>
-                    <p>Jsem velmi aktivní a mám za sebou několik zajímavých úspěchů. Snažím se nejen získávat certifikáty, ale také vytvářet kvalitní a hodnotné projekty. Veškeré své certifikáty a ukázky práce najdete na mém GitHubu a LinkedInu.
-                    </p>
+            </ul>
+            <br>
+            <ul class="sekcedva stred">
+                <li class="text">
+                    <h1>Plány</h1><br>
+                    <p>Snažím se neustále zlepšovat v práci s weby, vytvářím malé aplikace a hry, pracuji s Excelem a zvládám základy jazyka VBA a učím se základy kyberbezpečnosti. Do budoucna plánuju rozšířit své dovednosti o C++, React a TypeScript.</p>
+                </li>
+                <li><img class="obrazek" src="images/zkouska4.jpg" alt="Plány"></li>
+            </ul>
+            <br>
+            <ul class="sekcetri">
+                <li><img class="obrazek" src="images/zkouska2.jpg" alt="Úspěchy"></li>
+                <li class="text">
+                    <h1>Úspěchy</h1><br>
+                    <p>Jsem velmi aktivní a mám za sebou několik zajímavých úspěchů. Snažím se nejen získávat certifikáty, ale také vytvářet kvalitní a hodnotné projekty. Veškeré své certifikáty a ukázky práce najdete na mém GitHubu a LinkedInu.</p>
                 </li>
             </ul>
         </div>
     </div>
-    <section class="row projekty">
+
+    <!-- Projekty -->
+    <section class="row projekty" aria-label="Projekty">
         <p class="jq--projekty schovat">.</p>
         <h1 class="nadpis-special">Projekty</h1>
 
@@ -155,27 +160,20 @@
                     <h1>Web development</h1>
                     <div class="icons">
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript icon">
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript">
                             <p>JavaScript</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML5 icon">
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML5">
                             <p>HTML</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/css3.png" alt="CSS icon">
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/css3.png" alt="CSS">
                             <p>CSS</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="SASS icon">
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="SASS">
                             <p>SASS</p>
-
                         </div>
                     </div>
                     <a href="Javascriptprojekty.html">Projekty</a>
@@ -186,9 +184,8 @@
                     <h1>Python</h1>
                     <div class="icons">
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/python.png" alt="Python icon">
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/python.png" alt="Python">
                             <p>Python</p>
-
                             <a href="pythonProjects.html">Projekty</a>
                         </div>
                     </div>
@@ -199,15 +196,12 @@
                     <h1>C#</h1>
                     <div class="icons">
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/nolan/96/c-sharp-logo.png" alt="C# icon">
+                            <img width="96" height="96" src="https://img.icons8.com/nolan/96/c-sharp-logo.png" alt="C#">
                             <p>C#</p>
-
                         </div>
-
                         <div>
-                            <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/unity.png" alt="Unity icon">
+                            <img width="100" height="100" src="https://img.icons8.com/ios-filled/100/unity.png" alt="Unity">
                             <p>Unity</p>
-
                         </div>
                     </div>
                     <a href="CSProjects.html">Projekty</a>
@@ -218,38 +212,28 @@
                     <h1>Microsoft</h1>
                     <div class="icons">
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/windows-10.png" alt="Windows icon">
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/windows-10.png" alt="Windows">
                             <p>Windows</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel icon">
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel">
                             <p>Excel</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-word-2019--v2.png" alt="Word icon">
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-word-2019--v2.png" alt="Word">
                             <p>Word</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png" alt="PowerPoint icon">
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/microsoft-powerpoint-2019--v1.png" alt="PowerPoint">
                             <p>PowerPoint</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-access-2019.png" alt="Access icon">
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-access-2019.png" alt="Access">
                             <p>Access</p>
-
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="microsoft-outlook-2019"/>
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/microsoft-outlook-2019.png" alt="Outlook">
                             <p>Outlook</p>
-
                         </div>
                     </div>
                     <p>Práce s technologiemi od Microsoftu</p>
@@ -259,138 +243,122 @@
                     <h1>Grafika</h1>
                     <div class="icons">
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/canva.png" alt="Canva icon">
+                            <img width="96" height="96" src="https://img.icons8.com/fluency/96/canva.png" alt="Canva">
                             <p>Canva</p>
-
                         </div>
-
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/3d-fluency/94/adobe-photoshop.png" alt="Photoshop icon">
+                            <img width="96" height="96" src="https://img.icons8.com/3d-fluency/94/adobe-photoshop.png" alt="Adobe Photoshop">
                             <p>Adobe Photoshop</p>
-
                         </div>
-
                         <div>
-                            <img width="90" height="90" src="https://img.icons8.com/external-others-inmotus-design/67/external-adobe-adobe-acrobat-pdf-others-inmotus-design.png" alt="Adobe Acrobat icon">
+                            <img width="90" height="90" src="https://img.icons8.com/external-others-inmotus-design/67/external-adobe-adobe-acrobat-pdf-others-inmotus-design.png" alt="Adobe Acrobat">
                             <p>Adobe Acrobat</p>
-
                         </div>
                     </div>
                     <a href="grafika.html">Projekty</a>
                     <p>Úprava a tvorba grafiky</p>
-
-
                 </div>
 
                 <div class="help">
                     <h1>Nástroje</h1>
                     <div class="icons">
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/kali-linux.png" alt="kali-linux"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/kali-linux.png" alt="Kali Linux">
                             <p>Linux-Kali</p>
                         </div>
-
                         <div>
-                            <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github"/>
+                            <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="GitHub">
                             <p>Github</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/git.png" alt="git"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/git.png" alt="Git">
                             <p>Git</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio--v2.png" alt="visual-studio--v2"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio--v2.png" alt="Visual Studio">
                             <p>Visual Studio</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio-code-2019.png" alt="visual-studio-code-2019"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/visual-studio-code-2019.png" alt="VS Code">
                             <p>Vs Code</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/webstorm.png" alt="webstorm"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/webstorm.png" alt="WebStorm">
                             <p>Webstorm</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo"/>
+                            <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" alt="Postman">
                             <p>Postman</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/arduino.png" alt="arduino"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/arduino.png" alt="Arduino">
                             <p>Arduino</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/brave-web-browser.png" alt="brave-web-browser"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/brave-web-browser.png" alt="Brave">
                             <p>Brave</p>
                         </div>
                         <div>
-                            <img width="96" height="96" src="https://img.icons8.com/color/96/old-vmware-logo.png" alt="old-vmware-logo"/>
+                            <img width="96" height="96" src="https://img.icons8.com/color/96/old-vmware-logo.png" alt="VMware">
                             <p>VMware</p>
                         </div>
-
                     </div>
                     <p>Práce s nástroji</p>
                 </div>
+
             </div>
         </div>
     </section>
-
-
-
-
-
 </main>
 
 <footer>
-    <div class = "row kontakty-foot ">
+    <div class="row kontakty-foot">
         <div>
-            <h1 class = "nadpis-special jq--kontakty">Kontakt</h1>
+            <h1 class="nadpis-special jq--kontakty">Kontakt</h1>
             <form class="formular" action="https://formspree.io/f/xkgknpel" method="POST">
-
-                <input type="text" name="name" placeholder="Jméno" required>
-
-                <input type="email" name="email" placeholder="Email" required><br>
-
+                <input type="text" name="name" placeholder="Jméno" required autocomplete="name">
+                <input type="email" name="email" placeholder="Email" required autocomplete="email"><br>
                 <textarea name="message" placeholder="Zpráva" rows="4" cols="50" required></textarea><br>
-
                 <input type="submit" value="Odeslat">
-
             </form>
         </div>
-        <p> <span class = "main-email">Email</span> <br><span class = "email">mikuleckydominik@gmail.com</span></p>
+
+        <p>
+            <span class="main-email">Email</span><br>
+            <span class="email">mikuleckydominik@gmail.com</span>
+        </p>
+
         <div class="ikonyfoot">
-            <a href="https://www.linkedin.com/in/dominik-mikulecky-531710383/" target="_blank">
+            <a href="https://www.linkedin.com/in/dominik-mikulecky-531710383/" target="_blank" rel="noopener">
                 <img src="https://img.icons8.com/fluency/96/linkedin.png" alt="LinkedIn">
             </a>
-
-            <a href="https://www.instagram.com/tokyo_domsek/" target="_blank">
+            <a href="https://www.instagram.com/tokyo_domsek/" target="_blank" rel="noopener">
                 <img src="https://img.icons8.com/fluency/96/instagram-new.png" alt="Instagram">
             </a>
-
-            <a href="https://www.instagram.com/dominik_ajtak/" target="_blank">
-                <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub"/>
-
+            <a href="https://github.com/DomsekTokyo" target="_blank" rel="noopener">
+                <img width="96" height="96" src="https://img.icons8.com/fluency/96/github.png" alt="GitHub">
             </a>
         </div>
+
         <div class="logotokyo">
-            <a href = "#"><img src = "images/logotokyo.png" alt = "logo tokyo s lebkou"></a>
+            <a href="#"><img src="images/logotokyo.png" alt="Logo Tokyo s lebkou"></a>
         </div>
-        <div class = "footer-text">
+
+        <div class="footer-text">
             <p>&copy; 2025 Dominik Mikulecký. Všechna práva vyhrazena.<br>Vytvořeno v Litomyšli<br>Tokyo</p>
         </div>
-
     </div>
-
 </footer>
+
 <script src="efekty.js"></script>
 <script src="typeefeckt.js"></script>
 
 <style>
-    /* Styly pro chatovací tlačítko a okno */
     #chat-widget-button {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        background-color: #00ff41; /* Hacker Green */
+        background-color: #00ff41;
         color: black;
         border: none;
         border-radius: 50%;
@@ -400,9 +368,12 @@
         cursor: pointer;
         box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         z-index: 1000;
-        transition: transform 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
-    #chat-widget-button:hover { transform: scale(1.1); }
+    #chat-widget-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 255, 65, 0.4);
+    }
 
     #chat-window {
         display: none;
@@ -418,6 +389,13 @@
         z-index: 1000;
         flex-direction: column;
         font-family: 'Courier New', Courier, monospace;
+        /* plynulé otevření */
+        animation: slideUp 0.25s ease;
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 
     #chat-header {
@@ -426,6 +404,7 @@
         padding: 10px;
         font-weight: bold;
         text-align: center;
+        border-radius: 8px 8px 0 0;
         border-bottom: 1px solid #333;
     }
 
@@ -445,7 +424,15 @@
         border-radius: 15px;
         font-size: 14px;
         word-wrap: break-word;
+        /* zprávy se připlíží zlehka */
+        animation: fadeIn 0.2s ease;
     }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(4px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
     .user-msg {
         align-self: flex-end;
         background-color: #007acc;
@@ -462,6 +449,7 @@
         padding: 10px;
         border-top: 1px solid #333;
         display: flex;
+        gap: 6px;
     }
     #chat-input {
         flex: 1;
@@ -470,21 +458,30 @@
         border: 1px solid #555;
         background: #2d2d2d;
         color: white;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+    #chat-input:focus {
+        border-color: #00ff41;
     }
     #chat-send {
         background: #00ff41;
         border: none;
         padding: 8px 15px;
-        margin-left: 5px;
         cursor: pointer;
         font-weight: bold;
         border-radius: 5px;
+        transition: background 0.2s, transform 0.15s;
+    }
+    #chat-send:hover {
+        background: #00cc33;
+        transform: scale(1.05);
     }
 </style>
 
-<button id="chat-widget-button" onclick="toggleChat()">🤖</button>
+<button id="chat-widget-button" onclick="toggleChat()" aria-label="Otevřít chat">🤖</button>
 
-<div id="chat-window">
+<div id="chat-window" role="dialog" aria-label="MegaBot chat">
     <div id="chat-header">MegaBot v1.0</div>
     <div id="chat-messages">
         <div class="message bot-msg">Ahoj! Jsem MegaBot vytvořený Tokyem. Zeptej se mě na cokoliv (Wiki, Matika), nebo si jen pokecáme😎.</div>
@@ -496,7 +493,6 @@
 </div>
 
 <script>
-
     const API_URL = "https://dominiktokyo.pythonanywhere.com/";
 
     let learningMode = false;
@@ -541,7 +537,6 @@
                 learningMode = true;
                 lastUnknownQuestion = text;
             }
-
         } catch (error) {
             addMessage("Chyba: Server neodpovídá. Zkontroluj adresu v kódu!", "bot-msg");
             console.error(error);
@@ -555,12 +550,11 @@
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ otazka: lastUnknownQuestion, odpoved: answer })
             });
-            const data = await response.json();
+            await response.json();
 
             addMessage("Díky! Naučil jsem se to.", "bot-msg");
             learningMode = false;
             lastUnknownQuestion = "";
-
         } catch (error) {
             addMessage("Chyba při učení.", "bot-msg");
         }
@@ -575,7 +569,7 @@
         container.scrollTop = container.scrollHeight;
     }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
