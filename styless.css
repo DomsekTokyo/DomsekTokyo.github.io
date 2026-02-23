@@ -108,7 +108,7 @@ body:has(#check:not(:checked)) .light {
 }
 
 .TokyoUvod {
-  font-family: "Francois One", sans-serif;
+  font-family: "Francois One", "Helvetica", sans-serif;
   margin-right: 20px;
   font-size: 80px;
 }
@@ -125,7 +125,7 @@ body:has(#check:not(:checked)) .light {
   }
 }
 .typing h1 {
-  font-family: monospace;
+  font-family: monospace, "Francois One", "Helvetica", sans-serif;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block; /* důležité, aby se border posouval s textem */
@@ -204,7 +204,7 @@ body:has(#check:not(:checked)) .light {
   border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
   animation: border-color-shift 3s linear infinite;
 }
-/* fafafaf */
+
 @keyframes border-color-shift {
   0% {
     border-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000) 1;
@@ -374,7 +374,7 @@ li:hover a {
 }
 .projects a {
   display: block;
-  font-family: monospace;
+  font-family: monospace, "Francois One", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
@@ -465,7 +465,7 @@ li:hover a {
 .projects .Microsoft .icons div a,
 .projects .photoshop .icons div a,
 .projects .help .icons div a {
-  font-family: monospace;
+  font-family: monospace, "Francois One", sans-serif;
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
@@ -526,7 +526,7 @@ li:hover a {
 }
 .formular input, .formular textarea {
   background-color: #979797;
-  font-family: monospace;
+  font-family: monospace, "Francois One", "Helvetica", sans-serif;
   text-align: center;
   font-size: 20px;
   margin-top: 10px;

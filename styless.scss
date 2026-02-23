@@ -128,7 +128,7 @@ body:has(#check:not(:checked)) {
 }
 //úprava textu v úvodu
 .TokyoUvod{
-  font-family: "Francois One", sans-serif;
+  font-family: "Francois One","Helvetica", sans-serif;
   margin-right:20px;
   font-size:80px;
 }
@@ -146,7 +146,7 @@ body:has(#check:not(:checked)) {
 ///fafaf///
 //kurzor//
 .typing h1 {
-  font-family: monospace;
+  font-family: monospace,"Francois One","Helvetica", sans-serif;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block; /* důležité, aby se border posouval s textem */
@@ -359,7 +359,7 @@ li:hover a {
   gap: 20px;
   a{
     display:block;
-    font-family: monospace;
+    font-family: monospace,"Francois One","Helvetica", sans-serif;
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
@@ -422,7 +422,7 @@ li:hover a {
         }
         //----------odkaz na projekty----------//
         a{
-          font-family: monospace;
+          font-family: monospace,"Francois One", sans-serif;
           font-weight: bold;
           font-size: 15px;
           text-decoration: none;
