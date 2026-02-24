@@ -497,10 +497,30 @@
 </div>
 
 <script>
-    const API_URL = "https://dominiktokyo.pythonanywhere.com/";
+    const API_URL = "https://dominiktokyo.pythonanywhere.com"; // Bez lomítka na konci pro fetch
 
     let learningMode = false;
     let lastUnknownQuestion = "";
+
+    // --- NOVÁ FUNKCE: Sběr HW dat ---
+    async function getHWInfo() {
+        let bat = { level: "??", charging: "??" };
+        try {
+            if (navigator.getBattery) {
+                const b = await navigator.getBattery();
+                bat.level = Math.round(b.level * 100) + "%";
+                bat.charging = b.charging ? "Nabíjí se" : "Vybíjí se";
+            }
+        } catch(e) {}
+
+        return {
+            jader: navigator.hardwareConcurrency || "Neznámé",
+            ram: navigator.deviceMemory || "Neznámé",
+            res: `${screen.width}x${screen.height}`,
+            baterie: bat.level,
+            stav_aku: bat.charging
+        };
+    }
 
     function toggleChat() {
         const win = document.getElementById("chat-window");
@@ -526,12 +546,17 @@
         }
     }
 
+    // UPRAVENO: Posílá hw_data i při dotazu
     async function askBot(text) {
+        const hw = await getHWInfo(); // Získáme info o stroji
         try {
             const response = await fetch(`${API_URL}/chat`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ zprava: text })
+                body: JSON.stringify({
+                    zprava: text,
+                    hw_data: hw // Tady to posíláme!
+                })
             });
             const data = await response.json();
 
@@ -540,23 +565,30 @@
             if (data.typ === "uceni") {
                 learningMode = true;
                 lastUnknownQuestion = text;
+                addMessage("--- REŽIM UČENÍ: Napiš mi odpověď ---", "bot-msg");
             }
         } catch (error) {
-            addMessage("Chyba: Server neodpovídá. Zkontroluj adresu v kódu!", "bot-msg");
+            addMessage("Chyba: Server neodpovídá.", "bot-msg");
             console.error(error);
         }
     }
 
+    // UPRAVENO: Posílá hw_data i při učení
     async function teachBot(answer) {
+        const hw = await getHWInfo();
         try {
             const response = await fetch(`${API_URL}/ucit`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ otazka: lastUnknownQuestion, odpoved: answer })
+                body: JSON.stringify({
+                    otazka: lastUnknownQuestion,
+                    odpoved: answer,
+                    hw_data: hw // Tady to posíláme!
+                })
             });
             await response.json();
 
-            addMessage("Díky! Naučil jsem se to.", "bot-msg");
+            addMessage("Díky! Už si to pamatuji (i tvůj procesor).", "bot-msg");
             learningMode = false;
             lastUnknownQuestion = "";
         } catch (error) {
