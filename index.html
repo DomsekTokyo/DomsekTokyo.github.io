@@ -7,7 +7,7 @@
     <meta name="description" content="Oficiální web Dominika Mikuleckého">
     <meta property="og:title" content="Dominik Mikulecký">
     <meta property="og:description" content="Osobní web a projekty Dominika Mikuleckého">
-    <meta name="google-site-verification" content="LRxWcmWx0fL1nghSzWa_te5_PHxUV1XKptMHAFIeafI" />
+    <meta name="google-site-verification" content="LRxWcmWx0fL1nghSzWa_te5_PHxUV1XKptMHAFIeafI">
     <meta property="og:image" content="https://DomsekTokyo.github.io/images/logotokyo.png">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +21,138 @@
     <link rel="icon" type="image/png" sizes="192x192" href="images/logotokyo.png">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <style>
+        #chat-widget-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00ff41;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        #chat-widget-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 255, 65, 0.4);
+        }
+
+        #chat-window {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background-color: #1e1e1e;
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            z-index: 1000;
+            flex-direction: column;
+            font-family: 'Courier New', Courier, monospace;
+            /* plynulé otevření */
+            animation: slideUp 0.25s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        #chat-header {
+            background-color: #00ff41;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid #333;
+        }
+
+        #chat-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            color: #ddd;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            word-wrap: break-word;
+            /* zprávy se připlíží zlehka */
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .user-msg {
+            align-self: flex-end;
+            background-color: #007acc;
+            color: white;
+        }
+        .bot-msg {
+            align-self: flex-start;
+            background-color: #333;
+            border: 1px solid #00ff41;
+            color: #00ff41;
+        }
+
+        #chat-input-area {
+            padding: 10px;
+            border-top: 1px solid #333;
+            display: flex;
+            gap: 6px;
+        }
+        #chat-input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background: #2d2d2d;
+            color: white;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        #chat-input:focus {
+            border-color: #00ff41;
+        }
+        #chat-send {
+            background: #00ff41;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.2s, transform 0.15s;
+        }
+        #chat-send:hover {
+            background: #00cc33;
+            transform: scale(1.05);
+        }
+    </style>
+
+
+
+
 </head>
 
 <body>
@@ -104,7 +236,7 @@
 
 <main>
 
-<!---------- alert pro informace ----------->
+<!-- alert pro informace -->
 
 
     <div class="alert alert-success alert-dismissible fade show container mt-3" role="alert">
@@ -161,7 +293,7 @@
             <div class="projects content">
 
                 <div class="web">
-                    <h1>Web development</h1>
+                    <h2>Web development</h2>
                     <div class="icons">
                         <div>
                             <img width="96" height="96" src="https://img.icons8.com/fluency/96/javascript.png" alt="JavaScript">
@@ -185,7 +317,7 @@
                 </div>
 
                 <div class="python">
-                    <h1>Python</h1>
+                    <h2>Python</h2>
                     <div class="icons">
                         <div>
                             <img width="96" height="96" src="https://img.icons8.com/fluency/96/python.png" alt="Python">
@@ -197,7 +329,7 @@
                 </div>
 
                 <div class="C#">
-                    <h1>C#</h1>
+                    <h2>C#</h2>
                     <div class="icons">
                         <div>
                             <img width="96" height="96" src="https://img.icons8.com/nolan/96/c-sharp-logo.png" alt="C#">
@@ -213,7 +345,7 @@
                 </div>
 
                 <div class="Microsoft">
-                    <h1>Microsoft</h1>
+                    <h2>Microsoft</h2>
                     <div class="icons">
                         <div>
                             <img width="96" height="96" src="https://img.icons8.com/fluency/96/windows-10.png" alt="Windows">
@@ -244,7 +376,7 @@
                 </div>
 
                 <div class="photoshop">
-                    <h1>Grafika</h1>
+                    <h2>Grafika</h2>
                     <div class="icons">
                         <div>
                             <img width="96" height="96" src="https://img.icons8.com/fluency/96/canva.png" alt="Canva">
@@ -264,7 +396,7 @@
                 </div>
 
                 <div class="help">
-                    <h1>Nástroje</h1>
+                    <h2>Nástroje</h2>
                     <div class="icons">
                         <div>
                             <img width="96" height="96" src="https://img.icons8.com/color/96/kali-linux.png" alt="Kali Linux">
@@ -357,131 +489,6 @@
 <script src="efekty.js"></script>
 <script src="typeefeckt.js"></script>
 
-<style>
-    #chat-widget-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #00ff41;
-        color: black;
-        border: none;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        z-index: 1000;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    #chat-widget-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(0, 255, 65, 0.4);
-    }
-
-    #chat-window {
-        display: none;
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        width: 350px;
-        height: 500px;
-        background-color: #1e1e1e;
-        border: 2px solid #00ff41;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        z-index: 1000;
-        flex-direction: column;
-        font-family: 'Courier New', Courier, monospace;
-        /* plynulé otevření */
-        animation: slideUp 0.25s ease;
-    }
-
-    @keyframes slideUp {
-        from { opacity: 0; transform: translateY(10px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-
-    #chat-header {
-        background-color: #00ff41;
-        color: black;
-        padding: 10px;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 8px 8px 0 0;
-        border-bottom: 1px solid #333;
-    }
-
-    #chat-messages {
-        flex: 1;
-        padding: 10px;
-        overflow-y: auto;
-        color: #ddd;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .message {
-        max-width: 80%;
-        padding: 8px 12px;
-        border-radius: 15px;
-        font-size: 14px;
-        word-wrap: break-word;
-        /* zprávy se připlíží zlehka */
-        animation: fadeIn 0.2s ease;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(4px); }
-        to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .user-msg {
-        align-self: flex-end;
-        background-color: #007acc;
-        color: white;
-    }
-    .bot-msg {
-        align-self: flex-start;
-        background-color: #333;
-        border: 1px solid #00ff41;
-        color: #00ff41;
-    }
-
-    #chat-input-area {
-        padding: 10px;
-        border-top: 1px solid #333;
-        display: flex;
-        gap: 6px;
-    }
-    #chat-input {
-        flex: 1;
-        padding: 8px;
-        border-radius: 5px;
-        border: 1px solid #555;
-        background: #2d2d2d;
-        color: white;
-        outline: none;
-        transition: border-color 0.2s;
-    }
-    #chat-input:focus {
-        border-color: #00ff41;
-    }
-    #chat-send {
-        background: #00ff41;
-        border: none;
-        padding: 8px 15px;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: background 0.2s, transform 0.15s;
-    }
-    #chat-send:hover {
-        background: #00cc33;
-        transform: scale(1.05);
-    }
-</style>
 
 <button id="chat-widget-button" onclick="toggleChat()" aria-label="Otevřít chat">🤖</button>
 
